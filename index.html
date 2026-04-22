@@ -1,0 +1,3102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ticketLINK 리브랜딩 보고</title>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 16px; }
+  body {
+    font-family: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, 'Malgun Gothic', sans-serif;
+    background: #e9ecef;
+    color: #1a1a2e;
+    line-height: 1.65;
+    padding: 40px 20px;
+    font-size: 15px;
+    font-feature-settings: 'ss06';
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .slide {
+    width: 1280px;
+    max-width: 100%;
+    min-height: 720px;
+    margin: 0 auto 32px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    padding: 56px 64px;
+    position: relative;
+    page-break-after: always;
+  }
+  .slide-num {
+    position: absolute;
+    top: 28px;
+    right: 40px;
+    font-size: 13px;
+    color: #adb5bd;
+    letter-spacing: 0.08em;
+  }
+  .slide-tag {
+    display: inline-block;
+    background: #1a1a2e;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    letter-spacing: -0.03em;
+    line-height: 1.25;
+  }
+  h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    letter-spacing: -0.03em;
+  }
+  h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    letter-spacing: -0.02em;
+  }
+  .subtitle {
+    font-size: 16px;
+    color: #495057;
+    margin-bottom: 36px;
+    line-height: 1.7;
+  }
+  hr.divider {
+    border: none;
+    border-top: 2px solid #1a1a2e;
+    margin: 20px 0 36px;
+    width: 60px;
+  }
+
+  /* 표지 */
+  .cover {
+    min-height: 720px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(135deg, #141417 0%, #22222A 55%, #2E2E38 100%);
+    color: #fff;
+  }
+  .cover .brand-mark {
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    color: #1a1a2e;
+    margin-bottom: 40px;
+    font-weight: 600;
+  }
+  .cover h1 {
+    font-size: 56px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .cover .sub {
+    font-size: 20px;
+    color: #adb5bd;
+    margin-bottom: 60px;
+  }
+  .cover .meta {
+    font-size: 14px;
+    color: #6c757d;
+    letter-spacing: 0.08em;
+  }
+  .cover .meta strong { color: #dee2e6; font-weight: 600; }
+
+  /* 1. 요약 슬라이드 */
+  .compare-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 12px;
+  }
+  .compare-table th, .compare-table td {
+    padding: 16px 18px;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 14px;
+    vertical-align: top;
+  }
+  .compare-table th {
+    background: #f8f9fa;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    color: #495057;
+    border-bottom: 2px solid #1a1a2e;
+  }
+  .compare-table .col-label {
+    width: 140px;
+    background: #f8f9fa;
+    font-weight: 700;
+    color: #495057;
+  }
+  .compare-table .option-a { width: 28%; }
+  .compare-table .option-b {
+    width: 28%;
+    background: #f4f4f6;
+    position: relative;
+  }
+  .compare-table .option-c { width: 28%; }
+  .compare-table td.option-b { border-left: 3px solid #1a1a2e; border-right: 3px solid #1a1a2e; }
+  .compare-table tr:first-child td.option-b { border-top: 3px solid #1a1a2e; }
+  .compare-table tr:last-child td.option-b { border-bottom: 3px solid #1a1a2e; }
+  .option-slogan {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin-bottom: 6px;
+  }
+  .option-slogan.en { font-family: 'Pretendard Variable', 'Pretendard', sans-serif; }
+  .option-id {
+    display: inline-block;
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: #1a1a2e;
+    color: #fff;
+    text-align: center;
+    line-height: 28px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-right: 8px;
+  }
+  .option-id.b { background: #1a1a2e; color: #ffffff; }
+  .recommend-badge {
+    display: inline-block;
+    background: #1a1a2e;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-left: 8px;
+    letter-spacing: 0.08em;
+  }
+  .pros li { color: #2d6a4f; margin-bottom: 6px; padding-left: 16px; position: relative; font-size: 13px; list-style: none; }
+  .pros li::before { content: '+'; position: absolute; left: 0; font-weight: 700; }
+  .cons li { color: #c92a2a; margin-bottom: 6px; padding-left: 16px; position: relative; font-size: 13px; list-style: none; }
+  .cons li::before { content: '−'; position: absolute; left: 0; font-weight: 700; }
+  .score-row td { text-align: center; font-weight: 700; font-size: 16px; padding: 14px 18px; }
+  .score-final td { background: #1a1a2e; color: #fff; }
+  .score-final td.option-b { background: #1a1a2e; color: #ffffff; }
+  .score-dot { color: #1a1a2e; letter-spacing: 0.08em; }
+
+  /* 2. 포지셔닝 맵 */
+  .map-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  .map-canvas {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+  }
+  .map-axis-x, .map-axis-y {
+    position: absolute;
+    background: #adb5bd;
+  }
+  .map-axis-x { left: 0; right: 0; top: 50%; height: 1px; }
+  .map-axis-y { top: 0; bottom: 0; left: 50%; width: 1px; }
+  .map-label {
+    position: absolute;
+    font-size: 11px;
+    color: #495057;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+  .map-label.top { top: 10px; left: 50%; transform: translateX(-50%); }
+  .map-label.bottom { bottom: 10px; left: 50%; transform: translateX(-50%); }
+  .map-label.left { left: 10px; top: 50%; transform: translateY(-50%); }
+  .map-label.right { right: 10px; top: 50%; transform: translateY(-50%); }
+  .map-dot {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .map-dot .circle {
+    width: 70px; height: 70px;
+    border-radius: 50%;
+    background: #dee2e6;
+    border: 2px solid #adb5bd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 11px;
+    color: #495057;
+    margin: 0 auto 6px;
+    line-height: 1.2;
+    padding: 4px;
+  }
+  .map-dot.tl .circle { background: #f4f4f6; border: 3px solid #1a1a2e; color: #1a1a2e; width: 86px; height: 86px; font-size: 12px; }
+  .map-dot .name { font-size: 11px; color: #495057; font-weight: 600; }
+  .map-dot.tl .name { color: #1a1a2e; font-weight: 800; font-size: 13px; }
+  .empty-zone {
+    position: absolute;
+    border: 2px dashed #1a1a2e;
+    background: rgba(251, 197, 49, 0.08);
+    border-radius: 12px;
+    top: 8%; left: 8%;
+    width: 38%; height: 38%;
+  }
+  .empty-label {
+    position: absolute;
+    top: 12%; left: 10%;
+    background: #1a1a2e;
+    color: #1a1a2e;
+    font-weight: 800;
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.04em;
+  }
+
+  .map-legend {
+    padding: 20px 0;
+  }
+  .map-legend h3 { font-size: 20px; margin-bottom: 20px; }
+  .comp-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid #f1f3f5;
+  }
+  .comp-name {
+    flex: 0 0 100px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #1a1a2e;
+  }
+  .comp-slogan {
+    flex: 1;
+    font-size: 13px;
+    color: #495057;
+  }
+  .comp-slogan em { font-style: normal; color: #868e96; font-size: 12px; display: block; margin-top: 2px; }
+  .insight-box {
+    margin-top: 28px;
+    background: #1a1a2e;
+    color: #fff;
+    padding: 24px;
+    border-radius: 10px;
+  }
+  .insight-box h3 { color: #1a1a2e; font-size: 14px; letter-spacing: 0.12em; margin-bottom: 10px; }
+  .insight-box p { font-size: 15px; line-height: 1.7; }
+
+  /* 3. 심화 슬라이드 - 공통 */
+  .deep-head {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #1a1a2e;
+  }
+  .deep-id {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: #1a1a2e;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .deep-id.b { background: #1a1a2e; color: #ffffff; }
+  .deep-slogan {
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    flex: 1;
+  }
+  .deep-slogan.en { font-family: 'Pretendard Variable', 'Pretendard', sans-serif; }
+  .deep-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 36px;
+  }
+  .deep-section { margin-bottom: 28px; }
+  .deep-section h3 {
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    color: #6c757d;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .copy-main {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.3;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+  .copy-main.en { font-family: 'Pretendard Variable', 'Pretendard', sans-serif; }
+  .copy-sub {
+    font-size: 15px;
+    color: #495057;
+    line-height: 1.6;
+  }
+  .example-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin-bottom: 10px;
+    border-left: 3px solid #adb5bd;
+  }
+  .example-card.b { border-left-color: #1a1a2e; background: #f4f4f6; }
+  .example-card .ex-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #868e96;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+  .example-card .ex-copy {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1a1a2e;
+    line-height: 1.5;
+  }
+  .example-card .ex-copy.en { font-family: 'Pretendard Variable', 'Pretendard', sans-serif; }
+  .example-card .ex-note {
+    font-size: 12px;
+    color: #868e96;
+    margin-top: 6px;
+  }
+
+  /* 비주얼 목업 */
+  .visual-mockup {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 12px;
+    padding: 40px 32px;
+    color: #fff;
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .visual-mockup.b {
+    background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 50%, #1a1a2e 130%);
+  }
+  .visual-mockup.c {
+    background: linear-gradient(135deg, #2d3436 0%, #636e72 100%);
+  }
+  .visual-mockup::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 200px; height: 200px;
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 50%;
+  }
+  .vm-brand {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: #1a1a2e;
+    margin-bottom: 18px;
+    font-weight: 700;
+  }
+  .vm-slogan {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+  }
+  .vm-slogan.en { font-family: 'Pretendard Variable', 'Pretendard', sans-serif; }
+  .vm-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.6;
+  }
+
+  /* 평가 박스 */
+  .eval-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 20px;
+  }
+  .eval-box {
+    padding: 18px 20px;
+    border-radius: 10px;
+    background: #f8f9fa;
+  }
+  .eval-box.strong { background: #e6f7ed; border-left: 3px solid #2d6a4f; }
+  .eval-box.weak { background: #fff0f0; border-left: 3px solid #c92a2a; }
+  .eval-box h4 {
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .eval-box.strong h4 { color: #2d6a4f; }
+  .eval-box.weak h4 { color: #c92a2a; }
+  .eval-box ul { list-style: none; }
+  .eval-box li {
+    font-size: 13px;
+    margin-bottom: 6px;
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .eval-box.strong li::before { content: '✓'; position: absolute; left: 0; color: #2d6a4f; font-weight: 700; }
+  .eval-box.weak li::before { content: '!'; position: absolute; left: 0; color: #c92a2a; font-weight: 700; }
+
+  /* 추천 박스 */
+  .recommend-box {
+    background: #f4f4f6;
+    border: 2px solid #1a1a2e;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-top: 20px;
+  }
+  .recommend-box h4 {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    color: #0e0e15;
+    margin-bottom: 8px;
+    font-weight: 800;
+  }
+  .recommend-box p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #1a1a2e;
+    font-weight: 600;
+  }
+
+  /* 결론 박스 */
+  .conclusion-box {
+    background: #1a1a2e;
+    color: #fff;
+    padding: 24px 28px;
+    border-radius: 10px;
+    margin-top: 24px;
+  }
+  .conclusion-box h4 { color: #1a1a2e; font-size: 13px; letter-spacing: 0.12em; margin-bottom: 10px; }
+  .conclusion-box p { font-size: 15px; line-height: 1.7; }
+
+  /* 인쇄용 */
+  @media print {
+    body { background: #fff; padding: 0; }
+    .slide { box-shadow: none; margin: 0; border-radius: 0; page-break-after: always; }
+  }
+
+  /* ===== 마케팅 키비주얼 (멜론 스타일) ===== */
+  .kv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 18px;
+  }
+  .kv-wrap { display: flex; flex-direction: column; gap: 10px; }
+  .kv-poster {
+    aspect-ratio: 4/5;
+    border-radius: 20px;
+    padding: 40px 28px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+  }
+  .kv-poster.a {
+    background: linear-gradient(160deg, #5b2478 0%, #3a1652 100%);
+    color: #fff;
+  }
+  .kv-poster.b {
+    background: #1a1a2e;
+    color: #1a1a2e;
+  }
+  .kv-poster.c {
+    background: #1a1a2e;
+    color: #fff;
+  }
+  .kv-poster::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+  }
+  .kv-poster.b::before { background: rgba(255,255,255,0.35); }
+
+  .kv-tagline {
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+    opacity: 0.9;
+    position: relative;
+  }
+  .kv-tagline.en { font-family: 'Pretendard Variable', 'Pretendard', sans-serif; letter-spacing: 0.22em; }
+  .kv-logo {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    margin-bottom: 10px;
+    position: relative;
+    font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+  }
+  .kv-logo .t1 { font-weight: 400; }
+  .kv-logo .t2 { font-weight: 900; }
+  .kv-slogan {
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.35;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+    position: relative;
+  }
+  .kv-slogan.en { font-family: 'Pretendard Variable', 'Pretendard', sans-serif; font-style: italic; font-size: 18px; }
+
+  /* 폰 목업 */
+  .kv-phones {
+    position: relative;
+    width: 100%;
+    flex: 1;
+    margin-top: 16px;
+    min-height: 230px;
+  }
+  .kv-phone {
+    position: absolute;
+    width: 120px;
+    height: 230px;
+    border: 5px solid #0f0f1c;
+    border-radius: 22px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 16px 30px rgba(0,0,0,0.35);
+  }
+  .kv-phone.back {
+    right: -6px;
+    top: 4px;
+    transform: rotate(6deg);
+    z-index: 1;
+  }
+  .kv-phone.front {
+    left: 8px;
+    top: 24px;
+    transform: rotate(-10deg);
+    z-index: 2;
+  }
+  .kv-phone::before {
+    content: '';
+    position: absolute;
+    top: 4px; left: 50%;
+    transform: translateX(-50%);
+    width: 36px; height: 4px;
+    background: #0f0f1c;
+    border-radius: 2px;
+    z-index: 10;
+  }
+
+  /* 폰 내부 미니 UI */
+  .mini-ui {
+    width: 100%; height: 100%;
+    background: #fff;
+    padding-top: 12px;
+    font-size: 7px;
+    color: #1a1a2e;
+  }
+  .mini-header {
+    display: flex;
+    gap: 3px;
+    padding: 4px 6px 6px;
+    align-items: center;
+  }
+  .mini-cat {
+    font-size: 6px;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+  .mini-search {
+    flex: 1;
+    height: 12px;
+    background: #f1f3f5;
+    border-radius: 8px;
+  }
+  .mini-banner {
+    margin: 0 6px 6px;
+    aspect-ratio: 5/3;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+  }
+  .mini-banner.a { background: linear-gradient(135deg, #2d1b3d 0%, #6e3c7d 100%); }
+  .mini-banner.b { background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 60%, #1a1a2e 120%); }
+  .mini-banner.c { background: linear-gradient(135deg, #1a1a2e 0%, #2d3436 100%); }
+  .mini-banner::before {
+    content: '🏯';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -40%);
+    font-size: 24px;
+    opacity: 0.45;
+  }
+  .mini-banner-slg {
+    position: absolute;
+    top: 4px; right: 4px;
+    color: #fff;
+    font-size: 6px;
+    font-weight: 700;
+    background: rgba(0,0,0,0.4);
+    padding: 2px 5px;
+    border-radius: 6px;
+    line-height: 1.1;
+  }
+  .mini-banner-slg.en { font-family: 'Pretendard Variable', 'Pretendard', sans-serif; font-style: italic; }
+  .mini-banner-title {
+    position: absolute;
+    bottom: 4px; left: 5px;
+    color: #fff;
+    font-size: 7px;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+  .mini-icons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2px;
+    padding: 2px 6px 6px;
+  }
+  .mini-icon {
+    text-align: center;
+    font-size: 5px;
+    color: #495057;
+  }
+  .mini-icon .dot {
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: #f1f3f5;
+    margin: 0 auto 1px;
+  }
+  .mini-tabs {
+    display: flex;
+    gap: 6px;
+    padding: 4px 6px;
+    border-bottom: 1px solid #f1f3f5;
+    font-size: 6px;
+    font-weight: 700;
+    color: #adb5bd;
+  }
+  .mini-tabs .on { color: #1a1a2e; border-bottom: 1px solid #1a1a2e; padding-bottom: 2px; margin-bottom: -1px; }
+  .mini-list { padding: 5px 6px; }
+  .mini-item {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 3px;
+  }
+  .mini-item .thumb {
+    width: 18px; height: 24px;
+    border-radius: 2px;
+    background: linear-gradient(135deg, #495057, #1a1a2e);
+    flex-shrink: 0;
+  }
+  .mini-item .thumb.k1 { background: linear-gradient(135deg, #2d1b3d, #6e3c7d); }
+  .mini-item .thumb.k2 { background: linear-gradient(135deg, #1e3a5f, #4a90c2); }
+  .mini-item .meta .t { font-size: 6px; font-weight: 800; line-height: 1.2; }
+  .mini-item .meta .s { font-size: 5px; color: #868e96; }
+  .mini-pick {
+    padding: 4px 6px;
+    font-size: 7px;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: #1a1a2e;
+  }
+  .mini-pick.en { font-family: 'Pretendard Variable', 'Pretendard', sans-serif; }
+
+  .kv-note {
+    padding: 10px 14px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    font-size: 11px;
+    color: #495057;
+    line-height: 1.5;
+  }
+  .kv-note.b {
+    background: #f4f4f6;
+    border: 1px solid #1a1a2e;
+  }
+  .kv-note strong { color: #1a1a2e; }
+
+  /* ===== 경쟁사 브랜드 아이덴티티 현황 ===== */
+  .comp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 14px;
+    margin-bottom: 24px;
+  }
+  .comp-card {
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .comp-card-head {
+    padding: 14px 16px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+  }
+  .comp-brand-name {
+    font-size: 16px;
+    font-weight: 900;
+    color: #1a1a2e;
+    margin-bottom: 3px;
+    letter-spacing: -0.02em;
+  }
+  .comp-brand-sub {
+    font-size: 11px;
+    color: #868e96;
+  }
+
+  /* 로고 미니 */
+  .comp-logo-mock {
+    padding: 20px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 72px;
+    border-bottom: 1px solid #f1f3f5;
+  }
+  .comp-logo-mock.nol { background: #fff; }
+  .comp-logo-mock.yes { background: #1a1a2e; }
+  .comp-logo-mock.melon { background: #00CD3C; }
+  .logo-nol {
+    font-size: 22px;
+    font-weight: 900;
+    color: #3549FF;
+    letter-spacing: -0.04em;
+    font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+  }
+  .logo-nol .park {
+    color: #1a1a2e;
+    font-size: 12px;
+    font-weight: 700;
+    margin-left: 4px;
+  }
+  .logo-yes {
+    font-size: 22px;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: -0.04em;
+    font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+  }
+  .logo-melon {
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.03em;
+  }
+  .logo-melon::before {
+    content: '';
+    display: inline-block;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+
+  /* 컬러 팔레트 */
+  .comp-section {
+    padding: 14px 16px;
+    border-bottom: 1px solid #f1f3f5;
+  }
+  .comp-section:last-child { border-bottom: none; }
+  .comp-section h4 {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: #868e96;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  .color-palette {
+    display: flex;
+    gap: 8px;
+  }
+  .color-chip {
+    flex: 1;
+    padding: 8px 6px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 700;
+    min-height: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .color-chip .name {
+    font-size: 9px;
+    opacity: 0.8;
+    margin-bottom: 2px;
+    font-weight: 600;
+  }
+  .color-chip .hex {
+    font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+  }
+
+  .comp-slogan-box {
+    font-size: 13px;
+    color: #1a1a2e;
+    line-height: 1.5;
+    font-weight: 700;
+  }
+  .comp-slogan-box.empty {
+    color: #adb5bd;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 11px;
+  }
+  .comp-slogan-note {
+    font-size: 10px;
+    color: #868e96;
+    margin-top: 4px;
+    font-weight: 400;
+  }
+
+  .comp-tone-tag {
+    display: inline-block;
+    padding: 3px 8px;
+    background: #f1f3f5;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #495057;
+    margin-right: 4px;
+    margin-bottom: 3px;
+  }
+
+  /* 주요 발견 박스 */
+  .finding-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 20px;
+  }
+  .finding-box {
+    padding: 16px 18px;
+    background: #f4f4f6;
+    border: 2px solid #1a1a2e;
+    border-radius: 10px;
+  }
+  .finding-box h4 {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: #0e0e15;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  .finding-box .headline {
+    font-size: 14px;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+  .finding-box .desc {
+    font-size: 11px;
+    color: #495057;
+    line-height: 1.5;
+  }
+
+  /* 브랜드 성격 태그 */
+  .brand-type-tag {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+  }
+  .brand-type-tag.functional { background: #e7f1ff; color: #0065d1; }
+  .brand-type-tag.content { background: #ffe8dd; color: #cc3a00; }
+  .brand-type-tag.fan { background: #dff7e5; color: #1a7d3c; }
+  .brand-type-tag.experience { background: #fff4c7; color: #0e0e15; }
+
+  /* 시장 포지셔닝 인트로 */
+  .market-intro {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding: 18px 22px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #2d2b45 100%);
+    color: #fff;
+    border-radius: 10px;
+    margin-bottom: 24px;
+  }
+  .market-stat {
+    text-align: center;
+    padding: 0 8px;
+    border-right: 1px solid rgba(255,255,255,0.15);
+  }
+  .market-stat:last-child { border-right: none; }
+  .market-stat .num {
+    font-size: 24px;
+    font-weight: 900;
+    color: #1a1a2e;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+  }
+  .market-stat .num .unit {
+    font-size: 14px;
+    margin-left: 2px;
+  }
+  .market-stat .lbl {
+    font-size: 11px;
+    color: #adb5bd;
+    margin-top: 4px;
+    font-weight: 600;
+  }
+
+  /* 4분법 매트릭스 */
+  .brand-matrix {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+    margin-bottom: 24px;
+  }
+  .matrix-cell {
+    padding: 16px 18px;
+    border-radius: 10px;
+    position: relative;
+  }
+  .matrix-cell.functional { background: #e7f1ff; border-left: 4px solid #0065d1; }
+  .matrix-cell.content { background: #ffe8dd; border-left: 4px solid #cc3a00; }
+  .matrix-cell.fan { background: #dff7e5; border-left: 4px solid #1a7d3c; }
+  .matrix-cell.experience {
+    background: #1a1a2e;
+    color: #fff;
+    border-left: 4px solid #1a1a2e;
+  }
+  .matrix-cell .type {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    font-weight: 800;
+    margin-bottom: 4px;
+  }
+  .matrix-cell.functional .type { color: #0065d1; }
+  .matrix-cell.content .type { color: #cc3a00; }
+  .matrix-cell.fan .type { color: #1a7d3c; }
+  .matrix-cell.experience .type { color: #cfcfd6; }
+  .matrix-cell .owner {
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 4px;
+    letter-spacing: -0.02em;
+  }
+  .matrix-cell .keyword {
+    font-size: 12px;
+    color: #495057;
+    line-height: 1.5;
+  }
+  .matrix-cell.experience .keyword { color: #dee2e6; }
+  .matrix-cell .badge-occupy {
+    position: absolute;
+    top: 8px; right: 10px;
+    font-size: 9px;
+    background: #1a1a2e;
+    color: #ffffff;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 10px;
+    letter-spacing: 0.04em;
+  }
+
+  /* ===== 브랜드 자산: 앱 아이콘 + 파비콘 ===== */
+  .asset-section-h3 {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    font-weight: 800;
+    color: #fff;
+    background: #1a1a2e;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+    margin-top: 8px;
+  }
+  .app-asset-row {
+    display: grid;
+    grid-template-columns: 260px 1fr 240px;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .app-asset-card {
+    background: #0a0a0a;
+    border-radius: 16px;
+    padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 420px;
+  }
+  .app-asset-card.white {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+  }
+  .big-app-icon {
+    width: 140px; height: 140px;
+    background: #1a1a2e;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 900;
+    font-size: 32px;
+    letter-spacing: -0.04em;
+    font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+    box-shadow: 0 10px 28px rgba(255,26,0,0.35);
+    margin-bottom: 24px;
+  }
+  .big-app-label {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .iphone-body {
+    width: 220px;
+    aspect-ratio: 9/19;
+    background: #0a0a0a;
+    border: 3px solid #2d2d2d;
+    border-radius: 34px;
+    padding: 10px 10px 20px;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+  .iphone-notch {
+    width: 90px; height: 22px;
+    background: #0a0a0a;
+    border-radius: 0 0 14px 14px;
+    margin: 0 auto 2px;
+    position: relative;
+    z-index: 2;
+  }
+  .iphone-status {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-size: 9px;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 14px;
+    margin-top: -18px;
+  }
+  .iphone-status .batt {
+    background: #fff;
+    color: #000;
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-size: 7px;
+    font-weight: 800;
+  }
+  .home-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px 4px;
+    padding: 4px 6px;
+  }
+  .home-app { text-align: center; }
+  .home-app .ic {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    margin: 0 auto 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    color: #fff;
+    font-size: 8px;
+    line-height: 1;
+    white-space: pre-line;
+    text-align: center;
+  }
+  .home-app.melon .ic { background: #00CD3C; font-size: 18px; }
+  .home-app.link .ic {
+    background: #1a1a2e;
+    font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+    font-size: 9px;
+    letter-spacing: -0.04em;
+  }
+  .home-app.tbay .ic { background: #1a1a2e; font-size: 18px; font-family: 'Archivo', Arial, sans-serif; font-style: italic; }
+  .home-app.timet .ic { background: #FF6B5B; color: #fff; font-size: 16px; }
+  .home-app.nol .ic {
+    background: #fff;
+    color: #3549FF;
+    font-size: 6px;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    line-height: 1.1;
+  }
+  .home-app.yes .ic {
+    background: #FF4A08;
+    font-style: italic;
+    font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+    font-size: 11px;
+    font-weight: 900;
+  }
+  .home-app .nm {
+    font-size: 7px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  .splash-phone {
+    width: 180px;
+    aspect-ratio: 9/19;
+    background: #1a1a2e;
+    border: 3px solid #2d2d2d;
+    border-radius: 34px;
+    padding-top: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+  .splash-phone .notch-sm {
+    position: absolute;
+    top: 7px; left: 50%;
+    transform: translateX(-50%);
+    width: 78px; height: 20px;
+    background: #0a0a0a;
+    border-radius: 0 0 12px 12px;
+  }
+  .splash-logo-text {
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+  }
+  .splash-logo-text strong { font-weight: 900; }
+
+  /* 파비콘 */
+  .favicon-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .browser-mock {
+    border-radius: 14px;
+    padding: 32px 24px 24px;
+    background: #2a2a2a;
+    position: relative;
+    min-height: 220px;
+  }
+  .browser-mock.light { background: #c6c6cc; }
+  .browser-mock.faded { background: #1a1a1a; }
+  .browser-mock.faded .tab-row,
+  .browser-mock.faded .url-row,
+  .browser-mock.faded .tab-dots { opacity: 0.35; }
+  .tab-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #3a3a3a;
+    padding: 14px 18px;
+    border-radius: 14px 14px 0 0;
+    width: fit-content;
+    min-width: 280px;
+    margin-left: 22px;
+    position: relative;
+  }
+  .browser-mock.light .tab-row { background: #ffffff; }
+  .tab-dots { display: flex; gap: 8px; margin-right: 6px; }
+  .tab-dots span { width: 14px; height: 14px; border-radius: 50%; }
+  .tab-dots .r { background: #ff5f57; }
+  .tab-dots .y { background: #febc2e; }
+  .tab-dots .g { background: #28c840; }
+  .favicon-box {
+    width: 28px; height: 28px;
+    border-radius: 6px;
+    background: #1a1a2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 900;
+    font-size: 10px;
+    letter-spacing: -0.04em;
+    font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+    flex-shrink: 0;
+  }
+  .favicon-box.tsymbol {
+    background: #1a1a2e;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 900;
+  }
+  .tab-title {
+    font-size: 14px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+  }
+  .browser-mock.light .tab-title { color: #1a1a2e; }
+  .url-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 22px;
+    background: #3a3a3a;
+    border-radius: 0 14px 14px 14px;
+    margin-left: 22px;
+  }
+  .browser-mock.light .url-row { background: #ffffff; }
+  .url-nav { display: flex; gap: 8px; font-size: 16px; color: #888; }
+  .browser-mock.light .url-nav { color: #444; }
+  .url-input {
+    flex: 1;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .browser-mock.light .url-input {
+    background: #f0f0f5;
+    color: #1a1a2e;
+  }
+  .asset-note {
+    padding: 16px 20px;
+    background: #f4f4f6;
+    border-left: 4px solid #1a1a2e;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #495057;
+    line-height: 1.65;
+    margin-top: 20px;
+  }
+  .asset-note strong { color: #1a1a2e; }
+
+  /* 본사 시안 이미지 그리드 */
+  .official-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+  }
+  .official-box {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 14px;
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .official-img-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 16px;
+    min-height: 200px;
+    overflow: hidden;
+  }
+  .official-img-wrap img {
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+    display: block;
+    object-fit: contain;
+  }
+
+  /* 본사 확정 컬러 스트립 */
+  .official-color-strip {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 22px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    margin-bottom: 26px;
+  }
+  .ocs-label {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: #adb5bd;
+    font-weight: 700;
+  }
+  .ocs-chip {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 16px 8px 8px;
+    background: #0a0a0a;
+    border-radius: 40px;
+  }
+  .ocs-swatch {
+    width: 28px; height: 28px;
+    background: #1a1a2e;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #fff, 0 0 20px rgba(255,26,0,0.5);
+  }
+  .ocs-hex {
+    color: #1a1a2e;
+    font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+    font-weight: 900;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+  }
+  .ocs-name {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+  }
+
+  /* ===== 슬로건 심층 분석 ===== */
+  .cand-table {
+    width: 100%;
+    max-width: 760px;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 24px;
+    table-layout: fixed;
+  }
+  .cand-table col.c-id { width: 56px; }
+  .cand-table col.c-slg { width: auto; }
+  .cand-table col.c-type { width: 160px; }
+  .cand-table th:last-child,
+  .cand-table td:last-child { text-align: right; }
+  .cand-table th, .cand-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e9ecef;
+    text-align: left;
+    font-size: 14px;
+  }
+  .cand-table th {
+    background: #1a1a2e;
+    color: #fff;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+  .cand-table th:first-child { border-radius: 6px 0 0 0; }
+  .cand-table th:last-child { border-radius: 0 6px 0 0; }
+  .cand-table .cand-id {
+    width: 60px;
+    text-align: center;
+    font-weight: 800;
+    color: #fff;
+    background: #495057;
+  }
+  .cand-table .cand-id.b { background: #1a1a2e; color: #ffffff; }
+  .cand-table .cand-slg {
+    font-size: 15px;
+    font-weight: 800;
+    color: #1a1a2e;
+    letter-spacing: -0.02em;
+  }
+  .cand-table .cand-slg.en { font-family: 'Pretendard Variable', 'Pretendard', sans-serif; font-style: italic; }
+  .cand-table .cand-type {
+    font-size: 13px;
+    color: #495057;
+  }
+
+  /* 벤치마크 표 */
+  .bench-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 16px;
+  }
+  .bench-table th, .bench-table td {
+    padding: 11px 14px;
+    border-bottom: 1px solid #e9ecef;
+    text-align: left;
+    font-size: 13px;
+  }
+  .bench-table th {
+    background: #f8f9fa;
+    color: #495057;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+  .bench-table .b-plat {
+    width: 140px;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .bench-table .b-slg {
+    color: #1a1a2e;
+    font-weight: 600;
+  }
+
+  .key-finding {
+    padding: 16px 20px;
+    background: #1a1a2e;
+    color: #fff;
+    border-radius: 8px;
+    margin-bottom: 28px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .key-finding strong { color: #1a1a2e; }
+
+  /* 심층 분석 3열 */
+  .deep-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+  .deep-card {
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 0;
+    overflow: hidden;
+  }
+  .deep-card.b { border: 2px solid #1a1a2e; }
+  .deep-card-head {
+    padding: 16px 18px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+  }
+  .deep-card.b .deep-card-head { background: #f4f4f6; border-bottom-color: #1a1a2e; }
+  .deep-card-head .idx {
+    display: inline-block;
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    background: #1a1a2e;
+    color: #fff;
+    text-align: center;
+    line-height: 26px;
+    font-weight: 800;
+    font-size: 13px;
+    margin-right: 8px;
+  }
+  .deep-card.b .deep-card-head .idx { background: #1a1a2e; color: #1a1a2e; }
+  .deep-card-title {
+    font-size: 15px;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin-top: 6px;
+    letter-spacing: -0.02em;
+  }
+  .deep-card-title.en { font-family: 'Pretendard Variable', 'Pretendard', sans-serif; font-style: italic; }
+  .deep-card-body {
+    padding: 14px 18px;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+  .deep-card-body .lbl {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    margin-top: 10px;
+    margin-bottom: 4px;
+  }
+  .deep-card-body .lbl:first-child { margin-top: 0; }
+  .deep-card-body .lbl.pos { color: #2d6a4f; }
+  .deep-card-body .lbl.neg { color: #c92a2a; }
+  .deep-card-body .lbl.cmp { color: #1a1a2e; }
+  .deep-card-body ul { list-style: none; margin-bottom: 4px; }
+  .deep-card-body li {
+    padding-left: 12px;
+    position: relative;
+    margin-bottom: 3px;
+    color: #495057;
+  }
+  .deep-card-body li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 8px;
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: #adb5bd;
+  }
+  .deep-card-body li.pos::before { background: #2d6a4f; }
+  .deep-card-body li.neg::before { background: #c92a2a; }
+
+  /* 평가표 */
+  .eval-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 24px;
+  }
+  .eval-table th, .eval-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #e9ecef;
+    text-align: center;
+    font-size: 13px;
+  }
+  .eval-table th {
+    background: #f8f9fa;
+    font-weight: 700;
+    color: #495057;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+  .eval-table th.criterion { text-align: left; }
+  .eval-table td.criterion {
+    text-align: left;
+    font-weight: 700;
+    color: #1a1a2e;
+    background: #fafbfc;
+  }
+  .eval-table td.b-col {
+    background: #f4f4f6;
+    font-weight: 800;
+    color: #1a1a2e;
+  }
+  .eval-table th.b-col {
+    background: #1a1a2e;
+    color: #1a1a2e;
+  }
+  .stars { color: #1a1a2e; letter-spacing: 0.1em; font-size: 14px; }
+  .stars.low { color: #ced4da; }
+
+  /* 결정적 이유 */
+  .reason-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .reason-card {
+    padding: 20px 22px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #2d2b45 100%);
+    color: #fff;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  .reason-card::before {
+    content: attr(data-num);
+    position: absolute;
+    top: -10px; right: -5px;
+    font-size: 80px;
+    font-weight: 900;
+    color: #ffffff;
+    opacity: 0.08;
+    line-height: 1;
+    font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+  }
+  .reason-card .r-label {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: #1a1a2e;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  .reason-card .r-title {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+    line-height: 1.35;
+  }
+  .reason-card .r-desc {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #dee2e6;
+  }
+  .reason-card .r-desc strong { color: #E8E8EE; }
+
+  /* 보완 제안 */
+  .suggest-box {
+    padding: 24px 28px;
+    background: #f4f4f6;
+    border: 2px solid #1a1a2e;
+    border-radius: 12px;
+  }
+  .suggest-box h4 {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    color: #0e0e15;
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+  .suggest-stack {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 16px 0;
+  }
+  .suggest-tier {
+    flex: 1;
+    padding: 18px 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .suggest-tier.main {
+    background: #1a1a2e;
+    color: #fff;
+  }
+  .suggest-tier.sub {
+    background: #fff;
+    border: 1px solid #1a1a2e;
+    color: #1a1a2e;
+  }
+  .suggest-tier .tier-label {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    font-weight: 800;
+    margin-bottom: 6px;
+    opacity: 0.7;
+  }
+  .suggest-tier.main .tier-label { color: #cfcfd6; opacity: 1; }
+  .suggest-tier .tier-slg {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .suggest-tier .tier-slg.en { font-family: 'Pretendard Variable', 'Pretendard', sans-serif; font-style: italic; }
+  .suggest-arrow {
+    font-size: 24px;
+    color: #1a1a2e;
+    font-weight: 900;
+  }
+  .suggest-note {
+    font-size: 13px;
+    color: #495057;
+    line-height: 1.6;
+    margin-top: 12px;
+  }
+
+  /* ===== 실제 홈 적용 시뮬레이션 ===== */
+  .sim-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .sim-col { display: flex; flex-direction: column; }
+  .sim-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 10px 14px;
+    background: #f8f9fa;
+    border-radius: 8px;
+  }
+  .sim-label.b { background: #f4f4f6; border: 1px solid #1a1a2e; }
+  .sim-label .sim-id {
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: #1a1a2e;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .sim-label .sim-id.b { background: #1a1a2e; color: #ffffff; }
+  .sim-label .sim-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .sim-label .sim-tag {
+    font-size: 10px;
+    color: #868e96;
+    margin-left: auto;
+  }
+
+  .mock-home {
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    font-size: 11px;
+  }
+  /* Header */
+  .mh-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-bottom: 1px solid #f1f3f5;
+    background: #fff;
+  }
+  .mh-logo {
+    font-size: 14px;
+    font-weight: 900;
+    color: #1a1a2e;
+    letter-spacing: -0.03em;
+  }
+  .mh-logo .link { color: #0984e3; }
+  .mh-gnb {
+    display: flex;
+    gap: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #495057;
+  }
+  .mh-gnb span.active { color: #1a1a2e; font-weight: 800; }
+  .mh-search {
+    margin-left: auto;
+    width: 80px; height: 20px;
+    background: #f1f3f5;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    font-size: 9px;
+    color: #adb5bd;
+  }
+  .mh-login {
+    font-size: 10px;
+    color: #495057;
+    font-weight: 600;
+  }
+
+  /* Hero */
+  .mh-hero {
+    padding: 36px 22px 32px;
+    color: #fff;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .mh-hero::before {
+    content: '';
+    position: absolute;
+    top: -20px; right: -20px;
+    width: 120px; height: 120px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50%;
+  }
+  .mh-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; right: 20px;
+    width: 80px; height: 80px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 50%;
+  }
+  .mh-hero.a {
+    background: linear-gradient(135deg, #1a1a2e 0%, #3d2b5e 50%, #6e3c7d 100%);
+  }
+  .mh-hero.b {
+    background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 55%, #1a1a2e 130%);
+  }
+  .mh-hero.c {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  }
+  .mh-hero-tag {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .mh-hero.b .mh-hero-tag { color: #1a1a2e; }
+  .mh-slogan {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+  }
+  .mh-slogan.en { font-family: 'Pretendard Variable', 'Pretendard', sans-serif; }
+  .mh-subcopy {
+    font-size: 11px;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  .mh-cta {
+    display: inline-block;
+    padding: 7px 14px;
+    background: #fff;
+    color: #1a1a2e;
+    font-size: 10px;
+    font-weight: 800;
+    border-radius: 20px;
+    align-self: flex-start;
+  }
+  .mh-hero.b .mh-cta { background: #1a1a2e; }
+
+  /* Categories */
+  .mh-cats {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
+    padding: 14px 14px 10px;
+    background: #fff;
+  }
+  .mh-cat {
+    text-align: center;
+    font-size: 9px;
+    color: #495057;
+    font-weight: 600;
+  }
+  .mh-cat .ic {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: #f1f3f5;
+    margin: 0 auto 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+  }
+
+  /* Section */
+  .mh-section {
+    padding: 10px 14px 14px;
+    background: #fff;
+  }
+  .mh-section h4 {
+    font-size: 12px;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .mh-section h4 .dot {
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: #1a1a2e;
+  }
+  .mh-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .mh-card {
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .mh-card .thumb {
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(135deg, #dee2e6, #adb5bd);
+    position: relative;
+  }
+  .mh-card.k1 .thumb { background: linear-gradient(135deg, #ffd6a5, #ff9a76); }
+  .mh-card.k2 .thumb { background: linear-gradient(135deg, #a0c4ff, #5a7bc2); }
+  .mh-card.k3 .thumb { background: linear-gradient(135deg, #caffbf, #4a9f59); }
+  .mh-card.k4 .thumb { background: linear-gradient(135deg, #ffc6ff, #b863b8); }
+  .mh-card .rank {
+    position: absolute;
+    top: 4px; left: 4px;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 800;
+    padding: 2px 5px;
+    border-radius: 3px;
+  }
+  .mh-card .title {
+    padding: 6px 4px 2px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #1a1a2e;
+    line-height: 1.3;
+  }
+  .mh-card .meta {
+    padding: 0 4px 6px;
+    font-size: 9px;
+    color: #868e96;
+  }
+
+  /* Footer */
+  .mh-footer {
+    padding: 12px 14px;
+    background: #f8f9fa;
+    font-size: 9px;
+    color: #868e96;
+    text-align: center;
+  }
+  .mh-footer .fs {
+    font-size: 11px;
+    font-weight: 700;
+    color: #495057;
+    margin-bottom: 4px;
+  }
+  .mh-footer .fs.en { font-family: 'Pretendard Variable', 'Pretendard', sans-serif; font-style: italic; }
+
+  /* 포인트 박스 */
+  .sim-point {
+    margin-top: 10px;
+    padding: 10px 12px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    font-size: 11px;
+    color: #495057;
+    line-height: 1.5;
+  }
+  .sim-point.b {
+    background: #f4f4f6;
+    border: 1px solid #1a1a2e;
+    color: #1a1a2e;
+  }
+  .sim-point strong { color: #1a1a2e; }
+
+  /* ===== 모바일 앱 실제 UI 시뮬레이션 ===== */
+  .app-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+    align-items: start;
+  }
+  .app-wrap { display: flex; flex-direction: column; align-items: center; }
+  .mock-app {
+    width: 100%;
+    max-width: 340px;
+    border: 8px solid #1a1a2e;
+    border-radius: 28px;
+    overflow: hidden;
+    background: #fff;
+    font-size: 10px;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  }
+  /* 상태바 */
+  .app-statusbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 16px 4px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .app-statusbar .dots { letter-spacing: 3px; color: #495057; }
+
+  /* 헤더 (카테고리 + 검색) */
+  .app-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px 10px;
+  }
+  .app-cat {
+    font-size: 11px;
+    font-weight: 800;
+    color: #1a1a2e;
+    white-space: nowrap;
+  }
+  .app-search {
+    flex: 1;
+    background: #f1f3f5;
+    border-radius: 20px;
+    padding: 6px 10px;
+    font-size: 9px;
+    color: #495057;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  /* 메인 배너 */
+  .app-banner {
+    margin: 0 12px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 5/3;
+  }
+  .app-banner-img {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #2d1a5e 0%, #1a1a2e 50%, #3d2817 100%);
+    position: relative;
+  }
+  .app-banner-img.a { background: linear-gradient(135deg, #2d1b3d 0%, #6e3c7d 50%, #d67b5e 100%); }
+  .app-banner-img.b { background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 50%, #1a1a2e 100%); }
+  .app-banner-img.c { background: linear-gradient(135deg, #1a1a2e 0%, #2d3436 100%); }
+  .app-banner-img::before {
+    content: '🏯';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -30%);
+    font-size: 44px;
+    opacity: 0.5;
+  }
+  .app-banner-chip {
+    position: absolute;
+    top: 10px; left: 12px;
+    background: rgba(255,255,255,0.9);
+    color: #1a1a2e;
+    font-size: 8px;
+    font-weight: 800;
+    padding: 3px 7px;
+    border-radius: 10px;
+  }
+  .app-banner-title {
+    position: absolute;
+    bottom: 24px; left: 12px; right: 12px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.3;
+  }
+  .app-banner-date {
+    position: absolute;
+    bottom: 8px; left: 12px;
+    color: rgba(255,255,255,0.8);
+    font-size: 9px;
+  }
+  .app-banner-slogan {
+    position: absolute;
+    top: 10px; right: 12px;
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-align: right;
+    line-height: 1.3;
+    background: rgba(0,0,0,0.35);
+    padding: 4px 8px;
+    border-radius: 10px;
+  }
+  .app-banner-slogan.en { font-family: 'Pretendard Variable', 'Pretendard', sans-serif; font-style: italic; }
+  .app-pagination {
+    text-align: center;
+    padding: 6px 0 10px;
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #dee2e6;
+  }
+  .app-pagination span.on { color: #1a1a2e; }
+
+  /* 카테고리 아이콘 */
+  .app-icons {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    padding: 4px 8px 14px;
+  }
+  .app-icon {
+    text-align: center;
+    font-size: 8px;
+    color: #495057;
+    font-weight: 600;
+  }
+  .app-icon .sym {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: #f8f9fa;
+    margin: 0 auto 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+  }
+
+  /* 랭킹 탭 */
+  .app-rank-tabs {
+    display: flex;
+    gap: 14px;
+    padding: 8px 14px 0;
+    border-bottom: 1px solid #f1f3f5;
+    font-size: 11px;
+    font-weight: 800;
+    color: #adb5bd;
+  }
+  .app-rank-tabs .on {
+    color: #1a1a2e;
+    border-bottom: 2px solid #1a1a2e;
+    padding-bottom: 8px;
+    margin-bottom: -1px;
+  }
+  .app-rank-subtabs {
+    display: flex;
+    gap: 10px;
+    padding: 10px 14px;
+    font-size: 10px;
+    color: #868e96;
+    overflow-x: auto;
+  }
+  .app-rank-subtabs .on { color: #e74c3c; font-weight: 800; border-bottom: 2px solid #e74c3c; padding-bottom: 3px; }
+
+  /* 랭킹 카드 리스트 */
+  .app-rank-list { padding: 0 14px 14px; }
+  .app-rank-item {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #f8f9fa;
+  }
+  .app-rank-item .thumb {
+    width: 56px; height: 72px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #495057, #1a1a2e);
+    flex-shrink: 0;
+    position: relative;
+  }
+  .app-rank-item .thumb.k1 { background: linear-gradient(135deg, #2d1b3d, #6e3c7d); }
+  .app-rank-item .thumb.k2 { background: linear-gradient(135deg, #1e3a5f, #4a90c2); }
+  .app-rank-item .rank-badge {
+    position: absolute;
+    top: 0; left: 0;
+    background: #e74c3c;
+    color: #fff;
+    font-size: 9px;
+    font-weight: 900;
+    width: 18px; height: 18px;
+    border-radius: 0 0 6px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .app-rank-item .info { flex: 1; padding-top: 2px; }
+  .app-rank-item .info .t {
+    font-size: 11px;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin-bottom: 3px;
+    line-height: 1.3;
+  }
+  .app-rank-item .info .loc, .app-rank-item .info .dt {
+    font-size: 9px;
+    color: #868e96;
+    line-height: 1.5;
+  }
+
+  /* 노란 배너 */
+  .app-yellow-banner {
+    margin: 4px 14px 14px;
+    background: #ffd94a;
+    border-radius: 10px;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .app-yellow-banner .t {
+    font-size: 10px;
+    font-weight: 800;
+    color: #1a1a2e;
+    line-height: 1.4;
+    flex: 1;
+  }
+  .app-yellow-banner .t small { display: block; font-size: 8px; color: #495057; font-weight: 600; margin-top: 2px; }
+  .app-yellow-banner .char { font-size: 24px; }
+
+  /* 링크's Pick 섹션 (슬로건 변주 지점) */
+  .app-pick-section {
+    padding: 8px 14px 14px;
+  }
+  .app-pick-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6px;
+  }
+  .app-pick-head .name {
+    font-size: 13px;
+    font-weight: 900;
+    color: #1a1a2e;
+    letter-spacing: -0.02em;
+  }
+  .app-pick-head .name.en { font-family: 'Pretendard Variable', 'Pretendard', sans-serif; }
+  .app-pick-head .more { font-size: 9px; color: #868e96; }
+  .app-pick-sub {
+    font-size: 10px;
+    color: #6c757d;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  .app-pick-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .app-pick-card {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .app-pick-card .th {
+    height: 100px;
+    background: linear-gradient(135deg, #ffd6a5, #ff9a76);
+  }
+  .app-pick-card.k2 .th { background: linear-gradient(135deg, #a0c4ff, #5a7bc2); }
+  .app-pick-card .t {
+    padding: 5px 4px 2px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #1a1a2e;
+    line-height: 1.3;
+  }
+  .app-pick-card .m {
+    padding: 0 4px 6px;
+    font-size: 8px;
+    color: #868e96;
+  }
+
+  /* 하단 슬로건 스플래시 (푸터 직전) */
+  .app-splash {
+    margin: 6px 12px 12px;
+    padding: 18px 14px;
+    border-radius: 12px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+  }
+  .app-splash.a { background: linear-gradient(135deg, #2d1b3d 0%, #6e3c7d 100%); }
+  .app-splash.b { background: linear-gradient(135deg, #1a1a2e 0%, #1a1a2e 100%); }
+  .app-splash.c { background: linear-gradient(135deg, #1a1a2e 0%, #2d3436 100%); }
+  .app-splash .kicker {
+    font-size: 8px;
+    letter-spacing: 0.18em;
+    opacity: 0.7;
+    margin-bottom: 6px;
+    font-weight: 700;
+  }
+  .app-splash .slg {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+  .app-splash .slg.en { font-family: 'Pretendard Variable', 'Pretendard', sans-serif; }
+
+  /* 하단 GNB */
+  .app-gnb {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 8px 0 10px;
+    border-top: 1px solid #f1f3f5;
+    background: #fff;
+  }
+  .app-gnb .tab {
+    text-align: center;
+    font-size: 8px;
+    color: #adb5bd;
+    font-weight: 600;
+  }
+  .app-gnb .tab.on { color: #1a1a2e; font-weight: 800; }
+  .app-gnb .tab .ic { font-size: 14px; margin-bottom: 2px; }
+
+  /* 슬로건 노출 포인트 하이라이트 */
+  .slogan-slot {
+    position: relative;
+    outline: 2px dashed #ff3366;
+    outline-offset: -1px;
+    border-radius: 4px;
+  }
+  .slot-tag {
+    display: inline-block;
+    background: #ff3366;
+    color: #fff;
+    font-size: 9px;
+    font-weight: 800;
+    padding: 3px 7px;
+    border-radius: 10px;
+    margin-right: 6px;
+  }
+  .slot-legend {
+    margin-top: 12px;
+    padding: 10px 12px;
+    background: #fff0f3;
+    border: 1px solid #ff3366;
+    border-radius: 8px;
+    font-size: 10px;
+    color: #495057;
+    line-height: 1.7;
+  }
+  .slot-legend strong { color: #1a1a2e; }
+
+  /* ===== 회사소개 페이지 시뮬레이션 ===== */
+  .mock-about {
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    font-size: 11px;
+  }
+  .ma-topnav {
+    display: flex;
+    gap: 12px;
+    padding: 8px 14px;
+    background: #fafbfc;
+    border-bottom: 1px solid #f1f3f5;
+    font-size: 9px;
+    color: #868e96;
+  }
+  .ma-topnav .active { color: #1a1a2e; font-weight: 800; border-bottom: 2px solid #1a1a2e; padding-bottom: 4px; margin-bottom: -6px; }
+  .ma-breadcrumb {
+    padding: 8px 14px;
+    font-size: 9px;
+    color: #adb5bd;
+    border-bottom: 1px solid #f1f3f5;
+  }
+  .ma-hero {
+    padding: 32px 22px 30px;
+    color: #fff;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .ma-hero::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 60%);
+  }
+  .ma-hero.a { background: linear-gradient(135deg, #2d1b3d 0%, #4a2e5e 100%); }
+  .ma-hero.b { background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%); }
+  .ma-hero.c { background: linear-gradient(135deg, #1a1a2e 0%, #2d3436 100%); }
+  .ma-hero-kicker {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+  .ma-hero.b .ma-hero-kicker { color: #1a1a2e; }
+  .ma-hero-slogan {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
+    position: relative;
+  }
+  .ma-hero-slogan.en { font-family: 'Pretendard Variable', 'Pretendard', sans-serif; }
+  .ma-hero-desc {
+    font-size: 10px;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.6;
+    position: relative;
+  }
+
+  .ma-body { padding: 16px 14px; }
+  .ma-sec { margin-bottom: 16px; }
+  .ma-sec-label {
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    color: #868e96;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .ma-sec-title {
+    font-size: 13px;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  .ma-sec-title.en { font-family: 'Pretendard Variable', 'Pretendard', sans-serif; }
+  .ma-sec-desc {
+    font-size: 10px;
+    color: #495057;
+    line-height: 1.6;
+  }
+  .ma-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    margin-bottom: 12px;
+  }
+  .ma-stat { text-align: center; }
+  .ma-stat .num {
+    font-size: 15px;
+    font-weight: 900;
+    color: #1a1a2e;
+    display: block;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .ma-stat.b .num { color: #0e0e15; }
+  .ma-stat .lbl {
+    font-size: 9px;
+    color: #868e96;
+    font-weight: 600;
+  }
+  .ma-pillar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+  .ma-pillar-item {
+    padding: 10px 8px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    text-align: center;
+  }
+  .ma-pillar-item .ic { font-size: 16px; margin-bottom: 4px; }
+  .ma-pillar-item .nm {
+    font-size: 9px;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .ma-pillar-item.en .nm { font-family: 'Pretendard Variable', 'Pretendard', sans-serif; }
+
+  .ma-cta-band {
+    padding: 14px;
+    background: #1a1a2e;
+    color: #fff;
+    text-align: center;
+  }
+  .ma-cta-band.b { background: #1a1a2e; color: #1a1a2e; }
+  .ma-cta-band .t {
+    font-size: 11px;
+    font-weight: 800;
+    margin-bottom: 4px;
+  }
+  .ma-cta-band .t.en { font-family: 'Pretendard Variable', 'Pretendard', sans-serif; }
+  .ma-cta-band .s {
+    font-size: 9px;
+    color: rgba(255,255,255,0.7);
+  }
+  .ma-cta-band.b .s { color: rgba(26,26,46,0.7); }
+
+  /* 적합도 평가 */
+  .fit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 10px;
+  }
+  .fit-box {
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+  .fit-box.good { background: #e6f7ed; border-left: 3px solid #2d6a4f; }
+  .fit-box.mid { background: #fff7e6; border-left: 3px solid #e8a33d; }
+  .fit-box.bad { background: #fff0f0; border-left: 3px solid #c92a2a; }
+  .fit-box .fit-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+  }
+  .fit-box.good .fit-label { color: #2d6a4f; }
+  .fit-box.mid .fit-label { color: #0e0e15; }
+  .fit-box.bad .fit-label { color: #c92a2a; }
+</style>
+</head>
+<body>
+
+<!-- 표지 -->
+<div class="slide cover">
+  <div class="brand-mark">TICKETLINK REBRANDING</div>
+  <h1>ticketLINK 리브랜딩 보고</h1>
+  <p class="sub">브랜드 컬러 · 심볼 · 슬로건 현황 및 제안</p>
+  <div class="meta">
+    <strong>보고일</strong> &nbsp;·&nbsp; 2026. 04. 22 &nbsp;&nbsp;|&nbsp;&nbsp;
+    <strong>작성</strong> &nbsp;·&nbsp; 정원경
+  </div>
+</div>
+
+<!-- 1. 타사 벤치마킹 (경쟁사 브랜드 아이덴티티) -->
+<!-- 2. 경쟁사 브랜드 아이덴티티 현황 -->
+<div class="slide">
+  <span class="slide-num">01 / 04</span>
+  <span class="slide-tag">COMPETITOR RESEARCH</span>
+  <h1>경쟁사 브랜드 아이덴티티 현황</h1>
+  <p class="subtitle">
+    국내 티켓 예매 시장 현황 · 상위 3사 컬러·심볼·슬로건 3축 조사 · 포지셔닝 공백 분석
+  </p>
+
+  <div class="comp-grid">
+
+    <!-- NOL 티켓 -->
+    <div class="comp-card">
+      <div class="comp-card-head">
+        <div class="comp-brand-name">NOL 티켓</div>
+        <div class="comp-brand-sub">구 인터파크 티켓 · 2023년 통합 리브랜딩</div>
+        <span class="brand-type-tag functional">Functional Brand · 기능 중심</span>
+      </div>
+      <div class="comp-logo-mock nol">
+        <div class="logo-nol">NOL<span class="park">interpark</span></div>
+      </div>
+      <div class="comp-section">
+        <h4>Brand Color</h4>
+        <div class="color-palette">
+          <div class="color-chip" style="background:#3549FF; color:#fff;">
+            <div class="name">NOL BLUE</div>
+            <div class="hex">#3549FF</div>
+          </div>
+          <div class="color-chip" style="background:#5085FF; color:#fff;">
+            <div class="name">LIGHT</div>
+            <div class="hex">#5085FF</div>
+          </div>
+        </div>
+      </div>
+      <div class="comp-section">
+        <h4>Slogan</h4>
+        <div class="comp-slogan-box empty">(티켓 서비스 단독 슬로건 부재)</div>
+        <div class="comp-slogan-note">※ 그룹 "놀유니버스": "놀수록 놀랍게! Life up!" / "Making Happiness Playable"</div>
+      </div>
+      <div class="comp-section">
+        <h4>Tone & Feel</h4>
+        <span class="comp-tone-tag">청량</span>
+        <span class="comp-tone-tag">신뢰</span>
+        <span class="comp-tone-tag">모던</span>
+        <span class="comp-tone-tag">기능적</span>
+      </div>
+    </div>
+
+    <!-- YES24 티켓 -->
+    <div class="comp-card">
+      <div class="comp-card-head">
+        <div class="comp-brand-name">YES24 티켓</div>
+        <div class="comp-brand-sub">2023.04 창립 24주년 리뉴얼 · 시장 1·2위 경쟁</div>
+        <span class="brand-type-tag content">Content Brand · 콘텐츠 중심</span>
+      </div>
+      <div class="comp-logo-mock" style="background:#FF4A08;">
+        <div class="logo-yes" style="color:#fff;">YES24</div>
+      </div>
+      <div class="comp-section">
+        <h4>Brand Color (공식 가이드)</h4>
+        <div class="color-palette">
+          <div class="color-chip" style="background:#FF4A08; color:#fff;">
+            <div class="name">TICKET ORANGE</div>
+            <div class="hex">#FF4A08</div>
+          </div>
+          <div class="color-chip" style="background:#0080FF; color:#fff;">
+            <div class="name">YES24 BLUE</div>
+            <div class="hex">#0080FF</div>
+          </div>
+          <div class="color-chip" style="background:#041242; color:#fff;">
+            <div class="name">NAVY</div>
+            <div class="hex">#041242</div>
+          </div>
+        </div>
+      </div>
+      <div class="comp-section">
+        <h4>Slogan</h4>
+        <div class="comp-slogan-box">"좋은 공연 편리한 예매"</div>
+        <div class="comp-slogan-note">국문 · 기능적 · 가치+편익 병기</div>
+      </div>
+      <div class="comp-section">
+        <h4>Tone & Feel</h4>
+        <span class="comp-tone-tag">문화</span>
+        <span class="comp-tone-tag">콘텐츠</span>
+        <span class="comp-tone-tag">감성 큐레이션</span>
+        <span class="comp-tone-tag">도서 확장</span>
+      </div>
+    </div>
+
+    <!-- 멜론티켓 -->
+    <div class="comp-card">
+      <div class="comp-card-head">
+        <div class="comp-brand-name">멜론티켓</div>
+        <div class="comp-brand-sub">카카오엔터 계열 · 멜론 CI 계승</div>
+        <span class="brand-type-tag fan">Fan Platform Brand · 팬덤 특화</span>
+      </div>
+      <div class="comp-logo-mock melon">
+        <div class="logo-melon">Melon 티켓</div>
+      </div>
+      <div class="comp-section">
+        <h4>Brand Color</h4>
+        <div class="color-palette">
+          <div class="color-chip" style="background:#00CD3C; color:#fff;">
+            <div class="name">MELON GREEN</div>
+            <div class="hex">#00CD3C</div>
+          </div>
+          <div class="color-chip" style="background:#ffffff; color:#1a1a2e; border:1px solid #dee2e6;">
+            <div class="name">WHITE</div>
+            <div class="hex">#FFFFFF</div>
+          </div>
+        </div>
+      </div>
+      <div class="comp-section">
+        <h4>Slogan</h4>
+        <div class="comp-slogan-box">"듣다 · 보다 · 만나다"</div>
+        <div class="comp-slogan-note">국문 · 감성 · 3-액션 리듬 구조</div>
+      </div>
+      <div class="comp-section">
+        <h4>Tone & Feel</h4>
+        <span class="comp-tone-tag">감성</span>
+        <span class="comp-tone-tag">라이프스타일</span>
+        <span class="comp-tone-tag">음악</span>
+        <span class="comp-tone-tag">친근</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 주요 발견 (공백 3가지) -->
+  <h3 style="font-size: 16px; color: #1a1a2e; margin-bottom: 4px;">경쟁 분석 3대 발견 — 티켓링크 차별화 기회</h3>
+
+  <div class="finding-grid">
+    <div class="finding-box">
+      <h4>① COLOR GAP</h4>
+      <div class="headline">블루 · 블랙 · 그린<br>→ 옐로우 공백</div>
+      <div class="desc">NOL(블루)·YES24(블랙)·멜론(그린)이 주요 컬러 선점. <strong>옐로우/레드/핑크 계열은 공백</strong>으로, 티켓링크 옐로우 선점 시 즉시 구분 가능.</div>
+    </div>
+    <div class="finding-box">
+      <h4>② SLOGAN GAP</h4>
+      <div class="headline">국문 기능·감성 집중<br>→ 영문·MZ 공백</div>
+      <div class="desc">NOL 부재 · YES24 국문 기능 · 멜론 국문 감성. <strong>영문 + 라이프스타일 톤 포지션은 완전 공백</strong> → B안 "Link Your Vibe" 근거.</div>
+    </div>
+    <div class="finding-box">
+      <h4>③ SYMBOL TREND</h4>
+      <div class="headline">2023년 리브랜딩 러시<br>→ 워드마크 간결화</div>
+      <div class="desc">NOL·YES24 모두 2023년 리브랜딩 진행. <strong>심볼 의존도↓, 워드마크 중심 간결화</strong>가 최신 트렌드. 티켓링크도 동일 방향성.</div>
+    </div>
+  </div>
+
+  <!-- 브랜드 성격 4분법 매트릭스 -->
+  <h3 style="font-size: 16px; color: #1a1a2e; margin-top: 12px; margin-bottom: 4px;">브랜드 성격 4분법 — 티켓링크가 점유할 영역</h3>
+  <p style="font-size: 13px; color: #6c757d; margin-bottom: 10px;">
+    경쟁 3사가 이미 3개 축(기능·콘텐츠·팬덤)을 선점. <strong>"경험 연결"</strong> 영역이 유일한 공백.
+  </p>
+  <div class="brand-matrix">
+    <div class="matrix-cell functional">
+      <div class="type">FUNCTIONAL</div>
+      <div class="owner">NOL 티켓</div>
+      <div class="keyword">"가장 안정적인 예매"<br>빠른 예매 · 좌석 선택</div>
+    </div>
+    <div class="matrix-cell content">
+      <div class="type">CONTENT</div>
+      <div class="owner">YES24 티켓</div>
+      <div class="keyword">"문화 큐레이션"<br>공연·전시·도서 연결</div>
+    </div>
+    <div class="matrix-cell fan">
+      <div class="type">FAN PLATFORM</div>
+      <div class="owner">멜론티켓</div>
+      <div class="keyword">"팬덤 특화"<br>K-POP·팬 경험 중심</div>
+    </div>
+    <div class="matrix-cell experience">
+      <span class="badge-occupy">선점 기회</span>
+      <div class="type">EXPERIENCE</div>
+      <div class="owner">티켓링크</div>
+      <div class="keyword">"경험을 연결하다"<br>순간·감정·Vibe</div>
+    </div>
+  </div>
+
+  <div class="conclusion-box" style="margin-top: 24px;">
+    <h4>경쟁 분석 결론 — 티켓링크의 포지션</h4>
+    <p>
+      경쟁 3사가 <strong>기능(NOL) · 콘텐츠(YES24) · 팬덤(멜론)</strong>을 이미 선점.
+      <strong>"경험 연결(Experience Connection)"</strong> 영역만이 유일한 공백이며,
+      이는 브랜드명 "Link"와 직접 연결되는 자산 기반 포지션.
+      <br>→ <strong>"Link Your Vibe" 슬로건 + 옐로우 컬러</strong>로 Experience Connection Brand 포지셔닝 확립 가능.
+    </p>
+  </div>
+</div>
+
+
+<!-- 2. 경쟁사 포지셔닝 맵 (숨김: 경쟁사 슬로건 정보 미확정 — 추후 정확도 확보 후 복원) -->
+<div class="slide" style="display:none;">
+  <span class="slide-num">02 / 03</span>
+  <span class="slide-tag">POSITIONING MAP</span>
+  <h1>경쟁사 슬로건 포지셔닝 맵핑</h1>
+  <p class="subtitle">감성 ↔ 기능 / 국문 ↔ 영문 2축 분석. <strong>'감성 × 영문' 영역은 포지셔닝 공백</strong>입니다.</p>
+
+  <div class="map-wrap">
+    <!-- 맵 -->
+    <div class="map-canvas">
+      <div class="empty-zone"></div>
+      <div class="empty-label">포지셔닝 공백</div>
+
+      <div class="map-axis-x"></div>
+      <div class="map-axis-y"></div>
+      <div class="map-label top">감성 · 경험</div>
+      <div class="map-label bottom">기능 · CTA</div>
+      <div class="map-label left">국문</div>
+      <div class="map-label right">영문</div>
+
+      <!-- 경쟁사 -->
+      <div class="map-dot" style="top: 72%; left: 22%;">
+        <div class="circle">인터파크<br>티켓</div>
+      </div>
+      <div class="map-dot" style="top: 78%; left: 32%;">
+        <div class="circle">YES24<br>티켓</div>
+      </div>
+      <div class="map-dot" style="top: 65%; left: 38%;">
+        <div class="circle">멜론<br>티켓</div>
+      </div>
+      <div class="map-dot" style="top: 60%; left: 15%;">
+        <div class="circle">NOL<br>티켓</div>
+      </div>
+
+      <!-- A안 -->
+      <div class="map-dot" style="top: 30%; left: 28%;">
+        <div class="circle" style="border-color:#868e96; background:#e9ecef;">A안</div>
+        <div class="name">기억될 순간</div>
+      </div>
+
+      <!-- C안 -->
+      <div class="map-dot" style="top: 72%; left: 28%;">
+        <div class="circle" style="border-color:#868e96; background:#e9ecef;">C안</div>
+        <div class="name">예매하세요</div>
+      </div>
+
+      <!-- B안 - 공백 영역 -->
+      <div class="map-dot tl" style="top: 25%; left: 72%;">
+        <div class="circle">B안<br>추천</div>
+        <div class="name">Link Your Vibe</div>
+      </div>
+    </div>
+
+    <!-- 범례 -->
+    <div class="map-legend">
+      <h3>경쟁사 슬로건 현황</h3>
+      <div class="comp-row">
+        <div class="comp-name">인터파크티켓</div>
+        <div class="comp-slogan">"티켓의 모든 것"<br><em>기능 중심 · 국문</em></div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-name">YES24 티켓</div>
+        <div class="comp-slogan">"대한민국 No.1 문화 플랫폼"<br><em>지위 소구 · 기능적</em></div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-name">멜론티켓</div>
+        <div class="comp-slogan">"음악이 있는 모든 순간"<br><em>카테고리 한정 · 국문</em></div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-name">NOL 티켓</div>
+        <div class="comp-slogan">"놀 땐, NOL"<br><em>라이프스타일 · 국문 위트</em></div>
+      </div>
+
+      <div class="insight-box">
+        <h3>KEY INSIGHT</h3>
+        <p>
+          경쟁사 4사 모두 <strong>국문 + 기능/지위 중심</strong>에 밀집.<br>
+          <strong>감성 × 영문 × 라이프스타일</strong> 포지션은 비어있으며, B안이 이 공백을 선점할 수 있습니다.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- 2. 본사 1차 리브랜딩 시안 (브랜드 자산) -->
+<div class="slide">
+  <span class="slide-num">02 / 04</span>
+  <span class="slide-tag">OFFICIAL · 1ST DRAFT</span>
+  <h1>본사 1차 리브랜딩 시안</h1>
+  <p class="subtitle">본사로부터 전달받은 1차 시안 — 로고 · 컬러 · 앱 아이콘 · 파비콘 (수정 검토 필요)</p>
+
+  <div class="official-grid">
+    <div class="official-box">
+      <div class="asset-section-h3">01 &nbsp;·&nbsp; LOGO</div>
+      <div class="official-img-wrap">
+        <img src="https://image.toast.com/aaaaab/ticketlink/TKL_10/%EB%A1%9C%EA%B3%A0.png" alt="티켓링크 로고" />
+      </div>
+    </div>
+    <div class="official-box">
+      <div class="asset-section-h3">02 &nbsp;·&nbsp; BRAND COLOR</div>
+      <div class="official-img-wrap">
+        <img src="https://image.toast.com/aaaaab/ticketlink/TKL_5/%EB%B8%8C%EB%9E%9C%EB%93%9C%EC%BB%AC%EB%9F%AC.png" alt="브랜드 컬러" />
+      </div>
+    </div>
+    <div class="official-box">
+      <div class="asset-section-h3">03 &nbsp;·&nbsp; APP ICON</div>
+      <div class="official-img-wrap">
+        <img src="https://image.toast.com/aaaaab/ticketlink/TKL_9/%EC%95%B1%EC%95%84%EC%9D%B4%EC%BD%98.png" alt="앱 아이콘" />
+      </div>
+    </div>
+    <div class="official-box">
+      <div class="asset-section-h3">04 &nbsp;·&nbsp; FAVICON</div>
+      <div class="official-img-wrap">
+        <img src="https://image.toast.com/aaaaab/ticketlink/TKL_4/%ED%8C%8C%EB%B9%84%EC%BD%98.png" alt="파비콘" />
+      </div>
+    </div>
+  </div>
+
+  <div class="asset-note">
+    <strong>현재 시안 브랜드 컬러 · #FF1A00 TICKETLINK RED</strong> — 워드마크 "LINK" 심볼을 앱 아이콘 · 파비콘 · 스플래시에 일관 적용. 경쟁사(NOL 블루 · YES24 오렌지 · 멜론 그린) 사이에서 즉시 식별되는 레드 포지션.
+  </div>
+</div>
+
+<!-- 3. 우리가 제시하는 슬로건 3안 -->
+<!-- 3. 슬로건 심층 분석 리포트 -->
+<div class="slide">
+  <span class="slide-num">03 / 04</span>
+  <span class="slide-tag">OUR PROPOSAL · SLOGAN</span>
+  <h1>우리가 제시하는 슬로건 3안</h1>
+  <p class="subtitle">후보 3개 · 심층 분석 · 종합 평가 · 제안 · 보완 제안</p>
+
+  <!-- 후보 슬로건 3개 -->
+  <h3 style="margin-bottom: 10px;">후보 슬로건 3개</h3>
+  <table class="cand-table">
+    <colgroup><col class="c-id"><col class="c-slg"><col class="c-type"></colgroup>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>슬로건</th>
+        <th>유형</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="cand-id">A</td>
+        <td><span class="cand-slg">기억될 순간을 함께하세요</span></td>
+        <td class="cand-type">감성 / 경험형</td>
+      </tr>
+      <tr>
+        <td class="cand-id b">B</td>
+        <td><span class="cand-slg en">Link Your Vibe</span></td>
+        <td class="cand-type">브랜드 연계형</td>
+      </tr>
+      <tr>
+        <td class="cand-id">C</td>
+        <td><span class="cand-slg">함께할 순간을 예매하세요</span></td>
+        <td class="cand-type">행동 유도형 (CTA)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 후보별 심층 분석 -->
+  <h3>후보별 심층 분석</h3>
+  <div class="deep-cards">
+
+    <!-- A -->
+    <div class="deep-card">
+      <div class="deep-card-head">
+        <span class="idx">A</span>감성 / 경험형
+        <div class="deep-card-title">기억될 순간을<br>함께하세요</div>
+      </div>
+      <div class="deep-card-body">
+        <div class="lbl pos">STRENGTHS</div>
+        <ul>
+          <li class="pos">"기억될 순간"이 공연/이벤트의 본질적 가치(경험의 기억)를 잘 포착</li>
+          <li class="pos">감성적 울림이 강하고 브랜드 호감도 상승</li>
+        </ul>
+        <div class="lbl neg">WEAKNESSES</div>
+        <ul>
+          <li class="neg">여행·호텔·카메라 등 어떤 경험 브랜드에도 쓸 수 있는 범용성 → 티켓링크만의 고유성 부족</li>
+        </ul>
+        <div class="lbl cmp">VS. COMPETITORS</div>
+        <ul>
+          <li>경쟁사의 기능적 톤과 차별화되지만, 브랜드 네임과의 연결고리 없음</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- B (추천) -->
+    <div class="deep-card b">
+      <div class="deep-card-head">
+        <span class="idx">B</span>브랜드 연계형 ★
+        <div class="deep-card-title en">Link Your Vibe</div>
+      </div>
+      <div class="deep-card-body">
+        <div class="lbl pos">STRENGTHS</div>
+        <ul>
+          <li class="pos">브랜드명 "티켓<strong>링크</strong>"의 "Link" 직접 활용 → 네이밍 시너지 극대화</li>
+          <li class="pos">"Vibe"는 MZ 언어이자 공연/문화 분위기를 함축</li>
+          <li class="pos">짧고 리듬감 있어 기억 용이 (3음절)</li>
+          <li class="pos">경쟁사 중 영문 슬로건으로 세련된 포지셔닝 없음 → 공백 선점</li>
+        </ul>
+        <div class="lbl neg">WEAKNESSES</div>
+        <ul>
+          <li class="neg">영어 전용으로 40대+ 접근성 다소 낮음</li>
+        </ul>
+        <div class="lbl cmp">완화 요인</div>
+        <ul>
+          <li>주력 타깃이 2030 MZ세대이므로 실질적 리스크 낮음</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- C -->
+    <div class="deep-card">
+      <div class="deep-card-head">
+        <span class="idx">C</span>행동 유도형 (CTA)
+        <div class="deep-card-title">함께할 순간을<br>예매하세요</div>
+      </div>
+      <div class="deep-card-body">
+        <div class="lbl pos">STRENGTHS</div>
+        <ul>
+          <li class="pos">"예매"라는 직접적 CTA → 서비스 기능 명확 전달</li>
+        </ul>
+        <div class="lbl neg">WEAKNESSES</div>
+        <ul>
+          <li class="neg">너무 기능적이고 설명적 — 슬로건이라기보다 광고 카피에 가까움</li>
+          <li class="neg">"예매하세요"는 인터파크·YES24 어디에 붙여도 어색하지 않음 → 차별화 실패</li>
+        </ul>
+        <div class="lbl cmp">VS. COMPETITORS</div>
+        <ul>
+          <li>경쟁사 기존 톤과 동일 레벨에 머무름</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="slide">
+  <h1>제안 — B. Link Your Vibe <span style="color:#1a1a2e;">🏆</span></h1>
+  <p class="subtitle">6개 평가 기준 종합 · 결정적 이유 3가지 · 보완 제안</p>
+
+  <!-- 종합 평가표 -->
+  <h3>종합 평가표</h3>
+  <table class="eval-table">
+    <thead>
+      <tr>
+        <th class="criterion">평가 기준</th>
+        <th>A (기억될 순간)</th>
+        <th class="b-col">B (Link Your Vibe)</th>
+        <th>C (예매하세요)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="criterion">브랜드 네임 연계성</td>
+        <td><span class="stars">★★<span class="low">★</span></span></td>
+        <td class="b-col"><span class="stars">★★★</span></td>
+        <td><span class="stars">★<span class="low">★★</span></span></td>
+      </tr>
+      <tr>
+        <td class="criterion">경쟁사 차별화</td>
+        <td><span class="stars">★★<span class="low">★</span></span></td>
+        <td class="b-col"><span class="stars">★★★</span></td>
+        <td><span class="stars">★<span class="low">★★</span></span></td>
+      </tr>
+      <tr>
+        <td class="criterion">기억 용이성</td>
+        <td><span class="stars">★★<span class="low">★</span></span></td>
+        <td class="b-col"><span class="stars">★★★</span></td>
+        <td><span class="stars">★★<span class="low">★</span></span></td>
+      </tr>
+      <tr>
+        <td class="criterion">감성적 울림</td>
+        <td><span class="stars">★★★</span></td>
+        <td class="b-col"><span class="stars">★★★</span></td>
+        <td><span class="stars">★<span class="low">★★</span></span></td>
+      </tr>
+      <tr>
+        <td class="criterion">타깃 적합성 (MZ)</td>
+        <td><span class="stars">★★<span class="low">★</span></span></td>
+        <td class="b-col"><span class="stars">★★★</span></td>
+        <td><span class="stars">★★<span class="low">★</span></span></td>
+      </tr>
+      <tr>
+        <td class="criterion">확장성 (캠페인 활용)</td>
+        <td><span class="stars">★★<span class="low">★</span></span></td>
+        <td class="b-col"><span class="stars">★★★</span></td>
+        <td><span class="stars">★<span class="low">★★</span></span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 결정적 이유 3가지 -->
+  <h3>제안 B안 · 결정적 이유 3가지</h3>
+  <div class="reason-grid">
+    <div class="reason-card" data-num="1">
+      <div class="r-label">REASON 01</div>
+      <div class="r-title">브랜드 자산 활용</div>
+      <div class="r-desc">"Link"가 브랜드명에 내재되어 있어 슬로건이 곧 <strong>브랜드 리마인더</strong> 역할. 경쟁사는 절대 "Link"를 쓸 수 없음 → <strong>방어 가능한 포지셔닝</strong>.</div>
+    </div>
+    <div class="reason-card" data-num="2">
+      <div class="r-label">REASON 02</div>
+      <div class="r-title">포지셔닝 공백 선점</div>
+      <div class="r-desc">국내 티켓 플랫폼 중 <strong>감각적 영문 슬로건</strong>으로 프리미엄/트렌디 이미지를 잡은 곳이 없음. "Link Your Vibe"가 이 빈 자리를 선점.</div>
+    </div>
+    <div class="reason-card" data-num="3">
+      <div class="r-label">REASON 03</div>
+      <div class="r-title">캠페인 확장성</div>
+      <div class="r-desc">"Link Your Vibe" 기반으로 <strong>"Vibe with [아티스트명]"</strong>, <strong>"Link the Moment"</strong> 같은 시즌 캠페인으로 유연하게 변주 가능.</div>
+    </div>
+  </div>
+
+  <!-- 보완 제안 -->
+  <h3>보완 제안 — 한글 서브 슬로건 병기</h3>
+  <div class="suggest-box">
+    <h4>★ A + B 하이브리드 전략</h4>
+    <div class="suggest-stack">
+      <div class="suggest-tier main">
+        <div class="tier-label">MAIN</div>
+        <div class="tier-slg en">Link Your Vibe</div>
+      </div>
+      <div class="suggest-arrow">+</div>
+      <div class="suggest-tier sub">
+        <div class="tier-label">SUB</div>
+        <div class="tier-slg">기억될 순간을 함께하세요</div>
+      </div>
+    </div>
+    <p class="suggest-note">
+      <strong>영문 메인</strong>으로 브랜드 아이덴티티를 잡고, <strong>한글 서브</strong>로 의미 전달과 감성적 깊이를 보완.
+      한글 서브로 A안의 감성을 결합하면 양쪽 장점을 모두 취할 수 있으며, 40대+ 접근성 이슈도 완화됩니다.
+    </p>
+  </div>
+</div>
+
+
+
+<!-- 4. 슬로건 적용 키비주얼 -->
+<!-- 4. 마케팅 키비주얼 (앱스토어/프로모션 스타일) -->
+<div class="slide">
+  <span class="slide-num">04 / 04</span>
+  <span class="slide-tag">APPLICATION</span>
+  <h1>슬로건 적용 · 앱스토어 프로모션 키비주얼</h1>
+  <p class="subtitle">
+    티켓링크 리뉴얼 프로모션 이미지 3종 (9:16 세로 포맷).<br>
+    <span style="color:#868e96;">V1 영문 메인 · V2 한글 명료 · V3 한글 감성</span>
+  </p>
+
+  <iframe src="files/ticketlink_promo.html"
+          style="width:100%; min-width:1100px; height:780px; border:none; border-radius:16px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); background:#f5f5f7;"
+          scrolling="no"
+          title="티켓링크 프로모션 키비주얼 3종"></iframe>
+
+  <div class="conclusion-box" style="margin-top: 24px;">
+    <h4>3안 키비주얼 구성</h4>
+    <p>
+      <strong>V1 · Link Your Vibe</strong> — 영문 메인, 브랜드 리뉴얼 강조 (★ 추천)<br>
+      <strong>V2 · 함께할 순간을 예매하세요</strong> — 한글 명료, 기능 CTA 중심<br>
+      <strong>V3 · 기억될 순간을 함께하세요</strong> — 한글 감성, 경험 스토리텔링<br>
+      <br>
+      브랜드 레드(#1a1a2e) 그라디언트 · 골드 옐로우(#FFD84D) 포인트 · 3D 폰 목업으로 통일된 프로모션 시스템 구축.
+    </p>
+  </div>
+</div>
+
+</body>
+</html>
