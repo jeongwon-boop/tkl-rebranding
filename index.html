@@ -116,6 +116,153 @@
     letter-spacing: 0.08em;
   }
   .cover .meta strong { color: #dee2e6; font-weight: 600; }
+  .cover .flow-strip {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 22px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 40px;
+    margin: 10px 0 36px;
+    backdrop-filter: blur(8px);
+  }
+  .cover .flow-node {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: -0.01em;
+  }
+  .cover .flow-node.current {
+    color: #ffffff;
+    font-weight: 800;
+    padding: 4px 14px;
+    background: #FF1A00;
+    border-radius: 20px;
+    font-size: 13px;
+  }
+  .cover .flow-node.next {
+    color: #E0E7FF;
+    font-weight: 700;
+  }
+  .cover .flow-arrow {
+    color: rgba(255,255,255,0.3);
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  /* 다음 단계 박스 */
+  .next-step-box {
+    margin-top: 24px;
+    padding: 26px 30px;
+    background: linear-gradient(135deg, #141417 0%, #22222A 60%, #2E2E38 100%);
+    color: #fff;
+    border-radius: 14px;
+    position: relative;
+    overflow: hidden;
+  }
+  .next-step-box::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: rgba(255,26,0,0.1);
+  }
+  .next-step-box .nsb-label {
+    font-size: 12px;
+    letter-spacing: 0.24em;
+    color: #FF6B4D;
+    font-weight: 800;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .next-step-box .nsb-title {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+    position: relative;
+  }
+  .next-step-box .nsb-desc {
+    font-size: 14px;
+    line-height: 1.75;
+    color: #cfcfd6;
+    position: relative;
+  }
+  .next-step-box .nsb-desc strong { color: #fff; }
+
+  /* 슬로건 후보 그룹 리스트 */
+  .slg-groups {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 10px;
+  }
+  .slg-group {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+  }
+  .slg-group-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 14px;
+    letter-spacing: -0.01em;
+    align-self: flex-start;
+  }
+  .slg-group-badge.legacy { background: #e5e7eb; color: #374151; }
+  .slg-group-badge.design { background: #E0E7FF; color: #3730A3; }
+  .slg-group-badge.branding { background: #fef3c7; color: #92400e; }
+  .slg-group-badge.team { background: #d1fae5; color: #065f46; }
+  .slg-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .slg-list li {
+    font-size: 13px;
+    color: #1a1a2e;
+    padding: 10px 0;
+    border-bottom: 1px dashed #e5e7eb;
+    line-height: 1.5;
+    font-weight: 600;
+  }
+  .slg-list li:last-child { border-bottom: none; }
+  .slg-list li.en {
+    font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
+    font-style: italic;
+    font-weight: 800;
+  }
+  .slg-list li.small { font-size: 12px; color: #6c757d; font-weight: 500; }
+  .slg-list .mark-tag {
+    display: inline-block;
+    margin-left: 4px;
+    padding: 2px 8px;
+    background: #1a1a2e;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    border-radius: 10px;
+    letter-spacing: 0.04em;
+    vertical-align: middle;
+  }
+  .slg-list .mark-tag.official { background: #E0E7FF; color: #3730A3; }
+  .slg-list .mark-tag.current { background: #fef3c7; color: #92400e; }
+  .slg-list .note {
+    display: block;
+    font-size: 10px;
+    color: #9ca3af;
+    margin-top: 3px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
 
   /* 1. 요약 슬라이드 */
   .compare-table {
@@ -2568,11 +2715,11 @@
 
 <!-- 표지 -->
 <div class="slide cover">
-  <div class="brand-mark">TICKETLINK REBRANDING</div>
-  <h1>ticketLINK 리브랜딩 보고</h1>
-  <p class="sub">브랜드 컬러 · 심볼 · 슬로건 현황 및 제안</p>
+  <div class="brand-mark">TICKETLINK REBRANDING · ISSUE BRIEF</div>
+  <h1>ticketLINK 리브랜딩 현안 공유</h1>
+  <p class="sub">브랜드 컬러 · 심볼 · 슬로건 현안 정리</p>
   <div class="meta">
-    <strong>보고일</strong> &nbsp;·&nbsp; 2026. 04. 22 &nbsp;&nbsp;|&nbsp;&nbsp;
+    <strong>작성일</strong> &nbsp;·&nbsp; 2026. 04. 22 &nbsp;&nbsp;|&nbsp;&nbsp;
     <strong>작성</strong> &nbsp;·&nbsp; 정원경
   </div>
 </div>
@@ -2580,7 +2727,7 @@
 <!-- 1. 타사 벤치마킹 (경쟁사 브랜드 아이덴티티) -->
 <!-- 2. 경쟁사 브랜드 아이덴티티 현황 -->
 <div class="slide">
-  <span class="slide-num">01 / 04</span>
+  <span class="slide-num">01 / 03</span>
   <span class="slide-tag">COMPETITOR RESEARCH</span>
   <h1>경쟁사 브랜드 아이덴티티 현황</h1>
   <p class="subtitle">
@@ -2709,31 +2856,10 @@
 
   </div>
 
-  <!-- 주요 발견 (공백 3가지) -->
-  <h3 style="font-size: 16px; color: #1a1a2e; margin-bottom: 4px;">경쟁 분석 3대 발견 — 티켓링크 차별화 기회</h3>
-
-  <div class="finding-grid">
-    <div class="finding-box">
-      <h4>① COLOR GAP</h4>
-      <div class="headline">블루 · 블랙 · 그린<br>→ 옐로우 공백</div>
-      <div class="desc">NOL(블루)·YES24(블랙)·멜론(그린)이 주요 컬러 선점. <strong>옐로우/레드/핑크 계열은 공백</strong>으로, 티켓링크 옐로우 선점 시 즉시 구분 가능.</div>
-    </div>
-    <div class="finding-box">
-      <h4>② SLOGAN GAP</h4>
-      <div class="headline">국문 기능·감성 집중<br>→ 영문·MZ 공백</div>
-      <div class="desc">NOL 부재 · YES24 국문 기능 · 멜론 국문 감성. <strong>영문 + 라이프스타일 톤 포지션은 완전 공백</strong> → B안 "Link Your Vibe" 근거.</div>
-    </div>
-    <div class="finding-box">
-      <h4>③ SYMBOL TREND</h4>
-      <div class="headline">2023년 리브랜딩 러시<br>→ 워드마크 간결화</div>
-      <div class="desc">NOL·YES24 모두 2023년 리브랜딩 진행. <strong>심볼 의존도↓, 워드마크 중심 간결화</strong>가 최신 트렌드. 티켓링크도 동일 방향성.</div>
-    </div>
-  </div>
-
   <!-- 브랜드 성격 4분법 매트릭스 -->
-  <h3 style="font-size: 16px; color: #1a1a2e; margin-top: 12px; margin-bottom: 4px;">브랜드 성격 4분법 — 티켓링크가 점유할 영역</h3>
+  <h3 style="font-size: 16px; color: #1a1a2e; margin-top: 12px; margin-bottom: 4px;">브랜드 성격 4분법 — 경쟁사 포지션 및 티켓링크 현재 상태</h3>
   <p style="font-size: 13px; color: #6c757d; margin-bottom: 10px;">
-    경쟁 3사가 이미 3개 축(기능·콘텐츠·팬덤)을 선점. <strong>"경험 연결"</strong> 영역이 유일한 공백.
+    경쟁 3사는 각각 뚜렷한 포지션(기능·콘텐츠·팬덤)을 구축. <strong>티켓링크는 현재 "기능 중심" 메시지</strong>에 머물러 NOL과 포지션이 겹치는 상태.
   </p>
   <div class="brand-matrix">
     <div class="matrix-cell functional">
@@ -2752,20 +2878,19 @@
       <div class="keyword">"팬덤 특화"<br>K-POP·팬 경험 중심</div>
     </div>
     <div class="matrix-cell experience">
-      <span class="badge-occupy">선점 기회</span>
-      <div class="type">EXPERIENCE</div>
+      <span class="badge-occupy">현재</span>
+      <div class="type">CURRENT</div>
       <div class="owner">티켓링크</div>
-      <div class="keyword">"경험을 연결하다"<br>순간·감정·Vibe</div>
+      <div class="keyword">"공연·전시, 스포츠<br>예매 쉽고 빠르게!"</div>
     </div>
   </div>
 
   <div class="conclusion-box" style="margin-top: 24px;">
-    <h4>경쟁 분석 결론 — 티켓링크의 포지션</h4>
+    <h4>경쟁 분석 현황 — 티켓링크의 포지션</h4>
     <p>
-      경쟁 3사가 <strong>기능(NOL) · 콘텐츠(YES24) · 팬덤(멜론)</strong>을 이미 선점.
-      <strong>"경험 연결(Experience Connection)"</strong> 영역만이 유일한 공백이며,
-      이는 브랜드명 "Link"와 직접 연결되는 자산 기반 포지션.
-      <br>→ <strong>"Link Your Vibe" 슬로건 + 옐로우 컬러</strong>로 Experience Connection Brand 포지셔닝 확립 가능.
+      경쟁 3사는 각자 뚜렷한 브랜드 영역(<strong>기능 · 콘텐츠 · 팬덤</strong>)을 선점한 상태.
+      반면 티켓링크는 현재 <strong>"예매 쉽고 빠르게!" 기능 중심 메시지</strong>로 NOL과 포지션이 겹쳐,
+      <strong>차별화된 브랜드 포지션 정립이 필요한 상황</strong>입니다.
     </p>
   </div>
 </div>
@@ -2858,10 +2983,10 @@
 
 <!-- 2. 본사 1차 리브랜딩 시안 (브랜드 자산) -->
 <div class="slide">
-  <span class="slide-num">02 / 04</span>
+  <span class="slide-num">02 / 03</span>
   <span class="slide-tag">OFFICIAL · 1ST DRAFT</span>
   <h1>본사 1차 리브랜딩 시안</h1>
-  <p class="subtitle">본사로부터 전달받은 1차 시안 — 로고 · 컬러 · 앱 아이콘 · 파비콘 (수정 검토 필요)</p>
+  <p class="subtitle">본사로부터 전달받은 1차 시안 — 로고 · 컬러 · 앱 아이콘 · 파비콘</p>
 
   <div class="official-grid">
     <div class="official-box">
@@ -2895,248 +3020,65 @@
   </div>
 </div>
 
-<!-- 3. 우리가 제시하는 슬로건 3안 -->
-<!-- 3. 슬로건 심층 분석 리포트 -->
+<!-- 3. 슬로건 후보 (기존 제안 모음) -->
 <div class="slide">
-  <span class="slide-num">03 / 04</span>
-  <span class="slide-tag">OUR PROPOSAL · SLOGAN</span>
-  <h1>우리가 제시하는 슬로건 3안</h1>
-  <p class="subtitle">후보 3개 · 심층 분석 · 종합 평가 · 제안 · 보완 제안</p>
+  <span class="slide-num">03 / 03</span>
+  <span class="slide-tag">SLOGAN CANDIDATES</span>
+  <h1>슬로건 후보 — 기존 제안 모음</h1>
+  <p class="subtitle">티켓링크 구 버전 · 본사 디자인 · 본사 브랜딩 · 기획팀 4개 그룹에서 도출된 전체 후보</p>
 
-  <!-- 후보 슬로건 3개 -->
-  <h3 style="margin-bottom: 10px;">후보 슬로건 3개</h3>
-  <table class="cand-table">
-    <colgroup><col class="c-id"><col class="c-slg"><col class="c-type"></colgroup>
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>슬로건</th>
-        <th>유형</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="cand-id">A</td>
-        <td><span class="cand-slg">기억될 순간을 함께하세요</span><span class="official-label">본사 추천</span></td>
-        <td class="cand-type">감성 / 경험형</td>
-      </tr>
-      <tr>
-        <td class="cand-id b">B</td>
-        <td><span class="cand-slg en">Link Your Vibe</span></td>
-        <td class="cand-type">브랜드 연계형</td>
-      </tr>
-      <tr>
-        <td class="cand-id">C</td>
-        <td><span class="cand-slg">함께할 순간을 예매하세요</span></td>
-        <td class="cand-type">행동 유도형 (CTA)</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="slg-groups">
 
-  <!-- 후보별 심층 분석 -->
-  <h3>후보별 심층 분석</h3>
-  <div class="deep-cards">
-
-    <!-- A -->
-    <div class="deep-card">
-      <div class="deep-card-head">
-        <span class="idx">A</span>감성 / 경험형 <span class="official-label">본사 추천</span>
-        <div class="deep-card-title">기억될 순간을<br>함께하세요</div>
-      </div>
-      <div class="deep-card-body">
-        <div class="lbl pos">STRENGTHS</div>
-        <ul>
-          <li class="pos">"기억될 순간"이 공연/이벤트의 본질적 가치(경험의 기억)를 잘 포착</li>
-          <li class="pos">감성적 울림이 강하고 브랜드 호감도 상승</li>
-        </ul>
-        <div class="lbl neg">WEAKNESSES</div>
-        <ul>
-          <li class="neg">여행·호텔·카메라 등 어떤 경험 브랜드에도 쓸 수 있는 범용성 → 티켓링크만의 고유성 부족</li>
-        </ul>
-        <div class="lbl cmp">VS. COMPETITORS</div>
-        <ul>
-          <li>경쟁사의 기능적 톤과 차별화되지만, 브랜드 네임과의 연결고리 없음</li>
-        </ul>
-      </div>
+    <!-- 티켓링크 구 버전 -->
+    <div class="slg-group">
+      <div class="slg-group-badge legacy">티켓링크 구 버전</div>
+      <ul class="slg-list">
+        <li>언제나 좋은자리</li>
+        <li>공연전시, 스포츠 예매 쉽고 빠르게!<span class="mark-tag current">현 사용</span></li>
+        <li class="small">세상의 놀이 문화를 만들어가는 곳<span class="note">전자계약 서명 표기 슬로건</span></li>
+      </ul>
     </div>
 
-    <!-- B (추천) -->
-    <div class="deep-card b">
-      <div class="deep-card-head">
-        <span class="idx">B</span>브랜드 연계형 ★
-        <div class="deep-card-title en">Link Your Vibe</div>
-      </div>
-      <div class="deep-card-body">
-        <div class="lbl pos">STRENGTHS</div>
-        <ul>
-          <li class="pos">브랜드명 "티켓<strong>링크</strong>"의 "Link" 직접 활용 → 네이밍 시너지 극대화</li>
-          <li class="pos">"Vibe"는 MZ 언어이자 공연/문화 분위기를 함축</li>
-          <li class="pos">짧고 리듬감 있어 기억 용이 (3음절)</li>
-          <li class="pos">경쟁사 중 영문 슬로건으로 세련된 포지셔닝 없음 → 공백 선점</li>
-        </ul>
-        <div class="lbl neg">WEAKNESSES</div>
-        <ul>
-          <li class="neg">영어 전용으로 40대+ 접근성 다소 낮음</li>
-        </ul>
-        <div class="lbl cmp">완화 요인</div>
-        <ul>
-          <li>주력 타깃이 2030 MZ세대이므로 실질적 리스크 낮음</li>
-        </ul>
-      </div>
+    <!-- 본사 디자인 -->
+    <div class="slg-group">
+      <div class="slg-group-badge design">본사 디자인</div>
+      <ul class="slg-list">
+        <li>기억될 순간을 함께하세요.</li>
+        <li>즐거운 순간을 예매하세요.</li>
+        <li>공연전시부터 스포츠까지, 일상의 즐거움을 예매하세요</li>
+        <li>공연전시, 스포츠 예매 더 스마트하고 막힘없이</li>
+        <li>공연전시, 스포츠 예매 일정부터 예매까지 한 번에</li>
+        <li>공연전시, 스포츠 예매 즐거운 순간을 예매하세요.</li>
+      </ul>
     </div>
 
-    <!-- C -->
-    <div class="deep-card">
-      <div class="deep-card-head">
-        <span class="idx">C</span>행동 유도형 (CTA)
-        <div class="deep-card-title">함께할 순간을<br>예매하세요</div>
-      </div>
-      <div class="deep-card-body">
-        <div class="lbl pos">STRENGTHS</div>
-        <ul>
-          <li class="pos">"예매"라는 직접적 CTA → 서비스 기능 명확 전달</li>
-        </ul>
-        <div class="lbl neg">WEAKNESSES</div>
-        <ul>
-          <li class="neg">너무 기능적이고 설명적 — 슬로건이라기보다 광고 카피에 가까움</li>
-          <li class="neg">"예매하세요"는 인터파크·YES24 어디에 붙여도 어색하지 않음 → 차별화 실패</li>
-        </ul>
-        <div class="lbl cmp">VS. COMPETITORS</div>
-        <ul>
-          <li>경쟁사 기존 톤과 동일 레벨에 머무름</li>
-        </ul>
-      </div>
+    <!-- 본사 브랜딩 -->
+    <div class="slg-group">
+      <div class="slg-group-badge branding">본사 브랜딩</div>
+      <ul class="slg-list">
+        <li>최고의 순간을 위한 최고의 예매 서비스!</li>
+        <li>나만의 문화생활을 예매하다</li>
+        <li>모든 문화생활 예매는 한곳에서!</li>
+        <li>나만의 즐거움을 예매하다</li>
+        <li>최고의 순간을 한곳에서</li>
+        <li>모든 티켓이 한곳에</li>
+      </ul>
     </div>
 
-  </div>
-
-
-  <div class="slide">
-  <h1>제안 — B. Link Your Vibe <span style="color:#1a1a2e;">🏆</span></h1>
-  <p class="subtitle">6개 평가 기준 종합 · 결정적 이유 3가지 · 보완 제안</p>
-
-  <!-- 종합 평가표 -->
-  <h3>종합 평가표</h3>
-  <table class="eval-table">
-    <thead>
-      <tr>
-        <th class="criterion">평가 기준</th>
-        <th>A (기억될 순간)<br><span class="official-label-sm">본사 추천</span></th>
-        <th class="b-col">B (Link Your Vibe)</th>
-        <th>C (예매하세요)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="criterion">브랜드 네임 연계성</td>
-        <td><span class="stars">★★<span class="low">★</span></span></td>
-        <td class="b-col"><span class="stars">★★★</span></td>
-        <td><span class="stars">★<span class="low">★★</span></span></td>
-      </tr>
-      <tr>
-        <td class="criterion">경쟁사 차별화</td>
-        <td><span class="stars">★★<span class="low">★</span></span></td>
-        <td class="b-col"><span class="stars">★★★</span></td>
-        <td><span class="stars">★<span class="low">★★</span></span></td>
-      </tr>
-      <tr>
-        <td class="criterion">기억 용이성</td>
-        <td><span class="stars">★★<span class="low">★</span></span></td>
-        <td class="b-col"><span class="stars">★★★</span></td>
-        <td><span class="stars">★★<span class="low">★</span></span></td>
-      </tr>
-      <tr>
-        <td class="criterion">감성적 울림</td>
-        <td><span class="stars">★★★</span></td>
-        <td class="b-col"><span class="stars">★★★</span></td>
-        <td><span class="stars">★<span class="low">★★</span></span></td>
-      </tr>
-      <tr>
-        <td class="criterion">타깃 적합성 (MZ)</td>
-        <td><span class="stars">★★<span class="low">★</span></span></td>
-        <td class="b-col"><span class="stars">★★★</span></td>
-        <td><span class="stars">★★<span class="low">★</span></span></td>
-      </tr>
-      <tr>
-        <td class="criterion">확장성 (캠페인 활용)</td>
-        <td><span class="stars">★★<span class="low">★</span></span></td>
-        <td class="b-col"><span class="stars">★★★</span></td>
-        <td><span class="stars">★<span class="low">★★</span></span></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <!-- 결정적 이유 3가지 -->
-  <h3>제안 B안 · 결정적 이유 3가지</h3>
-  <div class="reason-grid">
-    <div class="reason-card" data-num="1">
-      <div class="r-label">REASON 01</div>
-      <div class="r-title">브랜드 자산 활용</div>
-      <div class="r-desc">"Link"가 브랜드명에 내재되어 있어 슬로건이 곧 <strong>브랜드 리마인더</strong> 역할. 경쟁사는 절대 "Link"를 쓸 수 없음 → <strong>방어 가능한 포지셔닝</strong>.</div>
+    <!-- 티켓링크 기획팀 -->
+    <div class="slg-group">
+      <div class="slg-group-badge team">티켓링크 기획팀</div>
+      <ul class="slg-list">
+        <li class="en">Link Your Vibe</li>
+        <li>함께할 순간을 예매하세요</li>
+        <li>기다림이 설렘이 되는 예매</li>
+        <li>마주해야 완성되는 감동</li>
+      </ul>
     </div>
-    <div class="reason-card" data-num="2">
-      <div class="r-label">REASON 02</div>
-      <div class="r-title">포지셔닝 공백 선점</div>
-      <div class="r-desc">국내 티켓 플랫폼 중 <strong>감각적 영문 슬로건</strong>으로 프리미엄/트렌디 이미지를 잡은 곳이 없음. "Link Your Vibe"가 이 빈 자리를 선점.</div>
-    </div>
-    <div class="reason-card" data-num="3">
-      <div class="r-label">REASON 03</div>
-      <div class="r-title">캠페인 확장성</div>
-      <div class="r-desc">"Link Your Vibe" 기반으로 <strong>"Vibe with [아티스트명]"</strong>, <strong>"Link the Moment"</strong> 같은 시즌 캠페인으로 유연하게 변주 가능.</div>
-    </div>
-  </div>
 
-  <!-- 보완 제안 -->
-  <h3>보완 제안 — 한글 서브 슬로건 병기</h3>
-  <div class="suggest-box">
-    <h4>★ A + B 하이브리드 전략</h4>
-    <div class="suggest-stack">
-      <div class="suggest-tier main">
-        <div class="tier-label">MAIN</div>
-        <div class="tier-slg en">Link Your Vibe</div>
-      </div>
-      <div class="suggest-arrow">+</div>
-      <div class="suggest-tier sub">
-        <div class="tier-label">SUB</div>
-        <div class="tier-slg">기억될 순간을 함께하세요</div>
-      </div>
-    </div>
-    <p class="suggest-note">
-      <strong>영문 메인</strong>으로 브랜드 아이덴티티를 잡고, <strong>한글 서브</strong>로 의미 전달과 감성적 깊이를 보완.
-      한글 서브로 A안의 감성을 결합하면 양쪽 장점을 모두 취할 수 있으며, 40대+ 접근성 이슈도 완화됩니다.
-    </p>
   </div>
 </div>
 
-
-
-<!-- 4. 슬로건 적용 키비주얼 -->
-<!-- 4. 마케팅 키비주얼 (앱스토어/프로모션 스타일) -->
-<div class="slide">
-  <span class="slide-num">04 / 04</span>
-  <span class="slide-tag">APPLICATION</span>
-  <h1>슬로건 적용 · 앱스토어 프로모션 키비주얼</h1>
-  <p class="subtitle">
-    티켓링크 리뉴얼 프로모션 이미지 3종 (9:16 세로 포맷).<br>
-    <span style="color:#868e96;">V1 영문 메인 · V2 한글 명료 · V3 한글 감성</span>
-  </p>
-
-  <iframe src="files/ticketlink_promo.html"
-          style="width:100%; min-width:1100px; height:780px; border:none; border-radius:16px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); background:#f5f5f7;"
-          scrolling="no"
-          title="티켓링크 프로모션 키비주얼 3종"></iframe>
-
-  <div class="conclusion-box" style="margin-top: 24px;">
-    <h4>3안 키비주얼 구성</h4>
-    <p>
-      <strong>V1 · Link Your Vibe</strong> — 영문 메인, 브랜드 리뉴얼 강조 (★ 추천)<br>
-      <strong>V2 · 함께할 순간을 예매하세요</strong> — 한글 명료, 기능 CTA 중심<br>
-      <strong>V3 · 기억될 순간을 함께하세요</strong> — 한글 감성, 경험 스토리텔링<br>
-      <br>
-      브랜드 레드(#1a1a2e) 그라디언트 · 골드 옐로우(#FFD84D) 포인트 · 3D 폰 목업으로 통일된 프로모션 시스템 구축.
-    </p>
-  </div>
-</div>
 
 </body>
 </html>
