@@ -175,6 +175,31 @@
     margin-right: 8px;
   }
   .option-id.b { background: #1a1a2e; color: #ffffff; }
+  /* 본사 추천 배지 */
+  .official-label {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 3px 10px;
+    background: #E0E7FF;
+    color: #3730A3;
+    font-size: 11px;
+    font-weight: 800;
+    border-radius: 12px;
+    letter-spacing: 0.04em;
+    vertical-align: middle;
+  }
+  .official-label-sm {
+    display: inline-block;
+    padding: 2px 7px;
+    background: #E0E7FF;
+    color: #3730A3;
+    font-size: 10px;
+    font-weight: 800;
+    border-radius: 10px;
+    letter-spacing: 0.04em;
+    margin-top: 4px;
+  }
+
   .recommend-badge {
     display: inline-block;
     background: #1a1a2e;
@@ -1591,10 +1616,10 @@
   }
   .eval-table th.b-col {
     background: #1a1a2e;
-    color: #1a1a2e;
+    color: #ffffff;
   }
   .stars { color: #1a1a2e; letter-spacing: 0.1em; font-size: 14px; }
-  .stars.low { color: #ced4da; }
+  .stars .low { color: #ced4da; }
 
   /* 결정적 이유 */
   .reason-grid {
@@ -2877,7 +2902,7 @@
     <tbody>
       <tr>
         <td class="cand-id">A</td>
-        <td><span class="cand-slg">기억될 순간을 함께하세요</span></td>
+        <td><span class="cand-slg">기억될 순간을 함께하세요</span><span class="official-label">본사 추천</span></td>
         <td class="cand-type">감성 / 경험형</td>
       </tr>
       <tr>
@@ -2900,7 +2925,7 @@
     <!-- A -->
     <div class="deep-card">
       <div class="deep-card-head">
-        <span class="idx">A</span>감성 / 경험형
+        <span class="idx">A</span>감성 / 경험형 <span class="official-label">본사 추천</span>
         <div class="deep-card-title">기억될 순간을<br>함께하세요</div>
       </div>
       <div class="deep-card-body">
@@ -2981,7 +3006,7 @@
     <thead>
       <tr>
         <th class="criterion">평가 기준</th>
-        <th>A (기억될 순간)</th>
+        <th>A (기억될 순간)<br><span class="official-label-sm">본사 추천</span></th>
         <th class="b-col">B (Link Your Vibe)</th>
         <th>C (예매하세요)</th>
       </tr>
